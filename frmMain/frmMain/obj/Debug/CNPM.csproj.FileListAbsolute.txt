@@ -21,3 +21,5 @@ D:\CNPM\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.frmTest.resources
 D:\CNPM\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.frmPolyclinic.resources
 D:\CNPM\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.frmCashier.resources
 D:\CNPM\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.frmDrugDelivery.resources
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.exe
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.pdb
