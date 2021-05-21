@@ -69,6 +69,7 @@
             this.groupControl1.Size = new System.Drawing.Size(933, 617);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Thao Tác";
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // groupControl2
             // 

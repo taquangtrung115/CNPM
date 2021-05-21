@@ -42,7 +42,6 @@
             this.txtSoLuongCB = new DevExpress.XtraEditors.TextEdit();
             this.txtGiaCB = new DevExpress.XtraEditors.TextEdit();
             this.txtDonViCB = new DevExpress.XtraEditors.TextEdit();
-            this.txtHSD = new DevExpress.XtraEditors.TextEdit();
             this.txtHamLuong = new DevExpress.XtraEditors.TextEdit();
             this.txtCongDung = new DevExpress.XtraEditors.TextEdit();
             this.cbMaNSX = new DevExpress.XtraEditors.LookUpEdit();
@@ -88,6 +87,7 @@
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtTim = new DevExpress.XtraEditors.TextEdit();
+            this.txtHSD = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -104,7 +104,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonViCB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHSD.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHamLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCongDung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbMaNSX.Properties)).BeginInit();
@@ -133,6 +132,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTim.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHSD.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHSD.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -175,7 +176,6 @@
             this.layoutControl1.Controls.Add(this.txtSoLuongCB);
             this.layoutControl1.Controls.Add(this.txtGiaCB);
             this.layoutControl1.Controls.Add(this.txtDonViCB);
-            this.layoutControl1.Controls.Add(this.txtHSD);
             this.layoutControl1.Controls.Add(this.txtHamLuong);
             this.layoutControl1.Controls.Add(this.txtCongDung);
             this.layoutControl1.Controls.Add(this.cbMaNSX);
@@ -183,6 +183,7 @@
             this.layoutControl1.Controls.Add(this.dgvThuoc);
             this.layoutControl1.Controls.Add(this.txtTenThuoc);
             this.layoutControl1.Controls.Add(this.txtMaThuoc);
+            this.layoutControl1.Controls.Add(this.txtHSD);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(2, 49);
             this.layoutControl1.Name = "layoutControl1";
@@ -272,14 +273,6 @@
             this.txtDonViCB.Size = new System.Drawing.Size(344, 22);
             this.txtDonViCB.StyleController = this.layoutControl1;
             this.txtDonViCB.TabIndex = 13;
-            // 
-            // txtHSD
-            // 
-            this.txtHSD.Location = new System.Drawing.Point(130, 100);
-            this.txtHSD.Name = "txtHSD";
-            this.txtHSD.Size = new System.Drawing.Size(344, 22);
-            this.txtHSD.StyleController = this.layoutControl1;
-            this.txtHSD.TabIndex = 12;
             // 
             // txtHamLuong
             // 
@@ -709,6 +702,21 @@
             this.txtTim.Size = new System.Drawing.Size(246, 42);
             this.txtTim.TabIndex = 0;
             // 
+            // txtHSD
+            // 
+            this.txtHSD.EditValue = null;
+            this.txtHSD.Location = new System.Drawing.Point(130, 100);
+            this.txtHSD.Name = "txtHSD";
+            this.txtHSD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtHSD.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtHSD.Properties.DisplayFormat.FormatString = "";
+            this.txtHSD.Properties.EditFormat.FormatString = "";
+            this.txtHSD.Size = new System.Drawing.Size(344, 22);
+            this.txtHSD.StyleController = this.layoutControl1;
+            this.txtHSD.TabIndex = 12;
+            // 
             // frmMedicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -720,6 +728,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thuốc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMedicine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -736,7 +745,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonViCB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHSD.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHamLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCongDung.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbMaNSX.Properties)).EndInit();
@@ -765,6 +773,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTim.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHSD.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHSD.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -784,7 +794,6 @@
         private DevExpress.XtraEditors.TextEdit txtSoLuongCB;
         private DevExpress.XtraEditors.TextEdit txtGiaCB;
         private DevExpress.XtraEditors.TextEdit txtDonViCB;
-        private DevExpress.XtraEditors.TextEdit txtHSD;
         private DevExpress.XtraEditors.TextEdit txtHamLuong;
         private DevExpress.XtraEditors.TextEdit txtCongDung;
         private DevExpress.XtraEditors.LookUpEdit cbMaNSX;
@@ -830,5 +839,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraEditors.TextEdit txtTim;
+        private DevExpress.XtraEditors.DateEdit txtHSD;
     }
 }

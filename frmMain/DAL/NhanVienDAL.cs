@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using BLL;
+using System.Data;
+namespace DAL
+{
+    public class NhanVienDAL
+    {
+        NhanVienBLL nv = new NhanVienBLL(); 
+        public DataTable loadGripView()
+        {
+            return nv.loadGridView();
+        }
+        public bool them(string maNV, string tenNV, string tenDN, string matKhau, string ngaySinh, string gioiTinh, string diaChi, string gmail, string sDT, string chucVu, double luongCB, double hSL, double luong, string maKhoa)
+        {
+            if (nv.them(maNV,tenDN,tenDN,matKhau,ngaySinh,gioiTinh,diaChi,gmail,sDT,chucVu,luongCB,hSL,luong,maKhoa) == true)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool xoa(string manv)
+        {
+            if (nv.xoa(manv) == true)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool sua(string maNV, string tenNV, string tenDN, string matKhau, string ngaySinh, string gioiTinh, string diaChi, string gmail, string sDT, string chucVu, double luongCB, double hSL, double luong, string maKhoa)
+        {
+            if (nv.sua(maNV,tenDN,tenDN,matKhau,ngaySinh,gioiTinh,diaChi,gmail,sDT,chucVu,luongCB,hSL,luong,maKhoa) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        //public DataTable findNV(string tenNV)
+        //{
+        //    return nv.findGridView(tenNV);
+        //}
+    }
+}

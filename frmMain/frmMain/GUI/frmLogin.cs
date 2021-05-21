@@ -7,7 +7,7 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using DAL;
 namespace frmMain.GUI
 {
     public partial class frmLogin : DevExpress.XtraEditors.XtraForm
@@ -16,14 +16,21 @@ namespace frmMain.GUI
         {
             InitializeComponent();
         }
-
+        DangNhapDAL dn = new DangNhapDAL();
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmMain b = new frmMain();
-            this.Hide();
-            b.ShowDialog();
+            if (dn.dangNhap(txtUsername.Text.Trim(), txtPassword.Text.Trim()) == true)
+            {
+                frmMain b = new frmMain();
+                this.Hide();
+                b.ShowDialog();
 
-            this.Show();
+                this.Show();
+            }
+            else
+            {
+                XtraMessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
