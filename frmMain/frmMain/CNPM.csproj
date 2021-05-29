@@ -86,6 +86,12 @@
     <Compile Include="GUI\frmDrugDelivery.Designer.cs">
       <DependentUpon>frmDrugDelivery.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmImportMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmImportMedicine.Designer.cs">
+      <DependentUpon>frmImportMedicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmLocation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDrugDelivery.resx">
       <DependentUpon>frmDrugDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmImportMedicine.resx">
+      <DependentUpon>frmImportMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLocation.resx">
       <DependentUpon>frmLocation.cs</DependentUpon>

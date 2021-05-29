@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+
 namespace BLL
 {
    public class DangNhapBLL
     {
         DataSet ds = new DataSet();
         SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
-        
 
         public bool login(string taiKhoan, string matKhau)
         {
@@ -28,6 +28,24 @@ namespace BLL
             {
                 return false;
             }
+        }
+        public string layChucVu(string taiKhoan, string matKhau)
+        {
+            string id = "";
+            SqlCommand cmd = new SqlCommand("SELECT * FROM NHANVIEN WHERE tendangnhap = '" + taiKhoan + "' and MatKhau = '" + matKhau + "'", cnn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        id = dr["CHUCVU"].ToString();
+                    }
+                }
+            
+            
+            return id;
         }
     }
 }

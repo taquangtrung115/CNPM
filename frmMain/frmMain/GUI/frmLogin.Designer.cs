@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 503);
+            this.ClientSize = new System.Drawing.Size(452, 534);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.ckPassword);

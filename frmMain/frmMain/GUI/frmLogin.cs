@@ -16,11 +16,13 @@ namespace frmMain.GUI
         {
             InitializeComponent();
         }
+        public static string chucVu = "";
         DangNhapDAL dn = new DangNhapDAL();
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (dn.dangNhap(txtUsername.Text.Trim(), txtPassword.Text.Trim()) == true)
             {
+               
                 frmMain b = new frmMain();
                 this.Hide();
                 b.ShowDialog();

@@ -289,7 +289,9 @@
             this.ClientSize = new System.Drawing.Size(1278, 652);
             this.Controls.Add(this.groupControl1);
             this.Name = "frmTest";
-            this.Text = "frmTest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Xét Nghiệm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

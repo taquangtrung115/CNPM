@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using frmMain.GUI;
+using DAL;
 namespace frmMain
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -14,8 +15,35 @@ namespace frmMain
         public frmMain()
         {
             InitializeComponent();
+            //this.Acc = nv;
         }
+        //private NhanVienModel acc;
 
+        //public NhanVienModel Acc
+        //{
+        //    get { return acc; }
+        //    set { acc = value; phanQuyen(Acc.ChucVu); }
+        //}
+        //void phanQuyen(string loaiTK)
+        //{
+        //    if (loaiTK == "bác sĩ")
+        //    {
+        //        btnNhanVien.Enabled = btnNhaCC.Enabled = btnLoaiThuoc.Enabled = btnThuoc.Enabled = btnDatHang.Enabled = btnBanThuoc.Enabled = btnNhapHang.Enabled = btnTiepNhan.Enabled = btnThuNgan.Enabled = btnLayThuoc.Enabled = false;
+        //    }
+        //    else if (loaiTK == "xét nghiệm")
+        //    {
+        //        btnNhanVien.Enabled = btnNhaCC.Enabled = btnLoaiThuoc.Enabled = btnThuoc.Enabled = btnDatHang.Enabled = btnBanThuoc.Enabled = btnNhapHang.Enabled = btnTiepNhan.Enabled = btnThuNgan.Enabled = btnLayThuoc.Enabled = btnKhamBenh.Enabled= false;
+        //    }
+        //    else if(loaiTK == "thu ngân")
+        //    {
+        //        btnNhanVien.Enabled = btnNhaCC.Enabled = btnLoaiThuoc.Enabled = btnThuoc.Enabled = btnDatHang.Enabled = btnBanThuoc.Enabled = btnNhapHang.Enabled = btnTiepNhan.Enabled  = btnLayThuoc.Enabled = btnKhamBenh.Enabled = false;
+        //    }
+        //    else if (loaiTK == "kho")
+        //    {
+        //        btnNhanVien.Enabled = btnNhaCC.Enabled = btnLoaiThuoc.Enabled = btnThuoc.Enabled = btnDatHang.Enabled = btnBanThuoc.Enabled = btnNhapHang.Enabled = btnTiepNhan.Enabled = btnThuNgan.Enabled = btnLayThuoc.Enabled = btnKhamBenh.Enabled = btnXetNghiem.Enabled= false;
+        //    }
+
+        //}
         private void frmMain_Load(object sender, EventArgs e)
         {
             DevExpress.LookAndFeel.DefaultLookAndFeel themes = new DevExpress.LookAndFeel.DefaultLookAndFeel();
@@ -235,6 +263,21 @@ namespace frmMain
             else
             {
                 frmDrugDelivery staff = new frmDrugDelivery();
+                staff.MdiParent = this;
+                staff.Show();
+            }
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkExit(typeof(frmImportMedicine));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmImportMedicine staff = new frmImportMedicine();
                 staff.MdiParent = this;
                 staff.Show();
             }

@@ -48,3 +48,4 @@ D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\DAL.dll
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\BLL.dll
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\DAL.pdb
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\BLL.pdb
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.frmImportMedicine.resources
