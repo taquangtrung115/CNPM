@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions2 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions3 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaffNursing));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.btnChoKham = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDieuChinh = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLapPhieu = new DevExpress.XtraEditors.SimpleButton();
             this.txtSDTNguoiThan = new DevExpress.XtraEditors.TextEdit();
             this.dgvDieuDuong = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -53,9 +55,6 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnLapPhieu = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -81,18 +80,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.layoutControl1);
+            buttonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("buttonImageOptions1.Image")));
+            buttonImageOptions2.Image = global::frmMain.Properties.Resources.Word_icon;
+            buttonImageOptions3.Image = global::frmMain.Properties.Resources.Excel_icon;
             this.groupControl1.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Tải Lại", ((System.Drawing.Image)(resources.GetObject("groupControl1.CustomHeaderButtons")))),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Xuất Word", global::frmMain.Properties.Resources.Word_icon),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Xuất Excel", global::frmMain.Properties.Resources.Excel_icon)});
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Tải Lại", true, buttonImageOptions1),
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Xuất Word", true, buttonImageOptions2),
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Xuất Excel", true, buttonImageOptions3)});
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
@@ -103,8 +103,6 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.btnLapPhieu);
-            this.layoutControl1.Controls.Add(this.btnChoKham);
-            this.layoutControl1.Controls.Add(this.btnDieuChinh);
             this.layoutControl1.Controls.Add(this.txtSDTNguoiThan);
             this.layoutControl1.Controls.Add(this.dgvDieuDuong);
             this.layoutControl1.Controls.Add(this.btnTim);
@@ -123,29 +121,18 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // btnChoKham
+            // btnLapPhieu
             // 
-            this.btnChoKham.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnChoKham.Appearance.Options.UseFont = true;
-            this.btnChoKham.Image = ((System.Drawing.Image)(resources.GetObject("btnChoKham.Image")));
-            this.btnChoKham.Location = new System.Drawing.Point(789, 499);
-            this.btnChoKham.Name = "btnChoKham";
-            this.btnChoKham.Size = new System.Drawing.Size(385, 40);
-            this.btnChoKham.StyleController = this.layoutControl1;
-            this.btnChoKham.TabIndex = 15;
-            this.btnChoKham.Text = "Chờ Khám";
-            // 
-            // btnDieuChinh
-            // 
-            this.btnDieuChinh.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDieuChinh.Appearance.Options.UseFont = true;
-            this.btnDieuChinh.Image = ((System.Drawing.Image)(resources.GetObject("btnDieuChinh.Image")));
-            this.btnDieuChinh.Location = new System.Drawing.Point(16, 499);
-            this.btnDieuChinh.Name = "btnDieuChinh";
-            this.btnDieuChinh.Size = new System.Drawing.Size(384, 40);
-            this.btnDieuChinh.StyleController = this.layoutControl1;
-            this.btnDieuChinh.TabIndex = 14;
-            this.btnDieuChinh.Text = "Điều Chỉnh";
+            this.btnLapPhieu.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLapPhieu.Appearance.Options.UseFont = true;
+            this.btnLapPhieu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLapPhieu.ImageOptions.Image")));
+            this.btnLapPhieu.Location = new System.Drawing.Point(16, 499);
+            this.btnLapPhieu.Name = "btnLapPhieu";
+            this.btnLapPhieu.Size = new System.Drawing.Size(1158, 40);
+            this.btnLapPhieu.StyleController = this.layoutControl1;
+            this.btnLapPhieu.TabIndex = 16;
+            this.btnLapPhieu.Text = "Lập Phiếu Khám Bệnh";
+            this.btnLapPhieu.Click += new System.EventHandler(this.btnLapPhieu_Click);
             // 
             // txtSDTNguoiThan
             // 
@@ -173,7 +160,7 @@
             // 
             // btnTim
             // 
-            this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
+            this.btnTim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.ImageOptions.Image")));
             this.btnTim.Location = new System.Drawing.Point(913, 184);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(261, 40);
@@ -254,8 +241,6 @@
             this.layoutControlItem10,
             this.layoutControlItem11,
             this.layoutControlItem6,
-            this.layoutControlItem7,
-            this.layoutControlItem8,
             this.layoutControlItem12});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
@@ -345,42 +330,12 @@
             this.layoutControlItem6.Text = "SĐT Người Thân";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(101, 17);
             // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.btnDieuChinh;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 483);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(390, 46);
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextVisible = false;
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.btnChoKham;
-            this.layoutControlItem8.Location = new System.Drawing.Point(773, 483);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(391, 46);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextVisible = false;
-            // 
-            // btnLapPhieu
-            // 
-            this.btnLapPhieu.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLapPhieu.Appearance.Options.UseFont = true;
-            this.btnLapPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnLapPhieu.Image")));
-            this.btnLapPhieu.Location = new System.Drawing.Point(406, 499);
-            this.btnLapPhieu.Name = "btnLapPhieu";
-            this.btnLapPhieu.Size = new System.Drawing.Size(377, 40);
-            this.btnLapPhieu.StyleController = this.layoutControl1;
-            this.btnLapPhieu.TabIndex = 16;
-            this.btnLapPhieu.Text = "Lập Phiếu Khám Bệnh";
-            // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.btnLapPhieu;
-            this.layoutControlItem12.Location = new System.Drawing.Point(390, 483);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 483);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(383, 46);
+            this.layoutControlItem12.Size = new System.Drawing.Size(1164, 46);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
@@ -419,8 +374,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             this.ResumeLayout(false);
 
@@ -450,10 +403,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.DateEdit txtNgaySinh;
-        private DevExpress.XtraEditors.SimpleButton btnChoKham;
-        private DevExpress.XtraEditors.SimpleButton btnDieuChinh;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraEditors.SimpleButton btnLapPhieu;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
     }

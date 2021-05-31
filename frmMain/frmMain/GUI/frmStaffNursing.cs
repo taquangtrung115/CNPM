@@ -38,5 +38,11 @@ namespace frmMain.GUI
             }
             
         }
+
+        private void btnLapPhieu_Click(object sender, EventArgs e)
+        {
+            frmMedicalBill mdb = new frmMedicalBill();
+            mdb.ShowDialog();
+        }
     }
 }
