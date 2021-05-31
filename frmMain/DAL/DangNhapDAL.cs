@@ -16,7 +16,6 @@ namespace DAL
        public string layCHucVu(string tendangnhap, string matkhau)
        {
            return dn.layChucVu(tendangnhap, matkhau).ToString();
-           
        }
     }
 }

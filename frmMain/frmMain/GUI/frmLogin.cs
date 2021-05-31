@@ -23,7 +23,7 @@ namespace frmMain.GUI
             if (dn.dangNhap(txtUsername.Text.Trim(), txtPassword.Text.Trim()) == true)
             {
                
-                frmMain b = new frmMain();
+                frmMain b = new frmMain(dn.layCHucVu(txtUsername.Text,txtPassword.Text).ToString());
                 this.Hide();
                 b.ShowDialog();
 

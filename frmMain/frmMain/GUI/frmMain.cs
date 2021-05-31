@@ -12,10 +12,41 @@ namespace frmMain
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        DangNhapDAL dn = new DangNhapDAL();
         public frmMain()
         {
             InitializeComponent();
-            //this.Acc = nv;
+            
+        }
+        private static string chucVu;
+
+        public static string ChucVu { get => chucVu; set => chucVu = value; }
+
+        public frmMain(string chucvu)
+        {
+            InitializeComponent();
+
+            ChucVu = chucvu;
+            if (ChucVu == "Bác sĩ")
+            {
+              btnXetNghiem.Enabled= btnViTri.Enabled=  btnNhanVien.Enabled = btnNhaCC.Enabled = btnLoaiThuoc.Enabled = btnThuoc.Enabled = btnDatHang.Enabled = btnBanThuoc.Enabled = btnNhapHang.Enabled = btnTiepNhan.Enabled = btnThuNgan.Enabled = btnLayThuoc.Enabled = false;
+            }
+            else if (ChucVu == "Xét nghiệm")
+            {
+              btnDaKhoa.Enabled= btnViTri.Enabled=  btnNhanVien.Enabled = btnNhaCC.Enabled = btnLoaiThuoc.Enabled = btnThuoc.Enabled = btnDatHang.Enabled = btnBanThuoc.Enabled = btnNhapHang.Enabled = btnTiepNhan.Enabled = btnThuNgan.Enabled = btnLayThuoc.Enabled = btnKhamBenh.Enabled = false;
+            }
+            else if (ChucVu == "Thu ngân")
+            {
+               btnViTri.Enabled= btnXetNghiem.Enabled= btnDaKhoa.Enabled= btnNhanVien.Enabled = btnNhaCC.Enabled = btnLoaiThuoc.Enabled = btnThuoc.Enabled = btnDatHang.Enabled = btnBanThuoc.Enabled = btnNhapHang.Enabled = btnTiepNhan.Enabled = btnLayThuoc.Enabled = btnKhamBenh.Enabled = false;
+            }
+            else if(ChucVu == "Kho")
+            {
+               btnDaKhoa.Enabled = btnViTri.Enabled= btnNhanVien.Enabled = btnNhaCC.Enabled = btnLoaiThuoc.Enabled = btnThuoc.Enabled = btnBanThuoc.Enabled = btnTiepNhan.Enabled = btnThuNgan.Enabled = btnLayThuoc.Enabled = btnKhamBenh.Enabled = btnXetNghiem.Enabled = false;
+            }
+            else if (ChucVu == "Tiếp nhận")
+            {
+              btnDatHang.Enabled= btnNhapHang.Enabled=  btnDaKhoa.Enabled = btnViTri.Enabled = btnNhanVien.Enabled = btnNhaCC.Enabled = btnLoaiThuoc.Enabled = btnThuoc.Enabled = btnBanThuoc.Enabled = btnThuNgan.Enabled = btnLayThuoc.Enabled = btnKhamBenh.Enabled = btnXetNghiem.Enabled = false;
+            }
         }
         //private NhanVienModel acc;
 
