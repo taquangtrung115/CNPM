@@ -401,3 +401,5 @@ D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\ja\DevExpress.Web.v17.1
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\ru\DevExpress.Web.v17.1.resources.dll
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\DevExpress.RichEdit.v17.1.Export.dll
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpBenhNhan.resources
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpHoaDon.resources
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpKhamBenh.resources

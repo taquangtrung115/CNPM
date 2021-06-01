@@ -502,7 +502,6 @@
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -1663,13 +1662,12 @@
             // xrTableCell26
             // 
             this.xrTableCell26.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HOADONTHUOC.THANHTIEN", "{0:C2}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CT_TOATHUOC.THANHTIEN", "{0:C2}")});
             this.xrTableCell26.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.xrTableCell26.Name = "xrTableCell26";
             this.xrTableCell26.StyleName = "DetailData3";
             this.xrTableCell26.StylePriority.UseFont = false;
             this.xrTableCell26.StylePriority.UseTextAlignment = false;
-            this.xrTableCell26.Text = "xrTableCell26";
             this.xrTableCell26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell26.Weight = 1D;
             // 
@@ -1845,7 +1843,6 @@
             this.detailBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel8,
             this.xrLabel7,
-            this.xrLabel6,
             this.xrLabel5});
             this.detailBand3.HeightF = 195.1667F;
             this.detailBand3.Name = "detailBand3";
@@ -1904,33 +1901,30 @@
             this.xrTableCell50.StyleName = "DetailData3";
             this.xrTableCell50.StylePriority.UseFont = false;
             this.xrTableCell50.StylePriority.UseTextAlignment = false;
-            this.xrTableCell50.Text = "xrTableCell50";
             this.xrTableCell50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell50.Weight = 0.40414113287783915D;
             // 
             // xrTableCell51
             // 
             this.xrTableCell51.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "THUOC.GIABAN", "{0:C2}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CT_TOATHUOC.GIABAN", "{0:C2}")});
             this.xrTableCell51.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.xrTableCell51.Name = "xrTableCell51";
             this.xrTableCell51.StyleName = "DetailData3";
             this.xrTableCell51.StylePriority.UseFont = false;
             this.xrTableCell51.StylePriority.UseTextAlignment = false;
-            this.xrTableCell51.Text = "xrTableCell51";
             this.xrTableCell51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell51.Weight = 0.22732251185275043D;
             // 
             // xrTableCell52
             // 
             this.xrTableCell52.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "THUOC.SOLUONGBAN")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CT_TOATHUOC.SOLUONG")});
             this.xrTableCell52.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.xrTableCell52.Name = "xrTableCell52";
             this.xrTableCell52.StyleName = "DetailData3";
             this.xrTableCell52.StylePriority.UseFont = false;
             this.xrTableCell52.StylePriority.UseTextAlignment = false;
-            this.xrTableCell52.Text = "xrTableCell52";
             this.xrTableCell52.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell52.Weight = 0.18474308135813922D;
             // 
@@ -2021,26 +2015,16 @@
             // 
             // xrLabel5
             // 
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(5F, 128.3333F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(10F, 86.66666F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel5.SizeF = new System.Drawing.SizeF(176.1667F, 26F);
             this.xrLabel5.StyleName = "Title";
             this.xrLabel5.Text = "Khách hàng ký tên";
             // 
-            // xrLabel6
-            // 
-            this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HOADONTHUOC.NGAYLAPHDKHAM")});
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(442.75F, 73.33334F);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(176.1667F, 26F);
-            this.xrLabel6.StyleName = "Title";
-            // 
             // xrLabel7
             // 
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(442.75F, 128.3333F);
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(446.0833F, 86.66666F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel7.SizeF = new System.Drawing.SizeF(176.1667F, 26F);
@@ -2175,7 +2159,6 @@
         private DevExpress.XtraReports.UI.DetailBand detailBand3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow17;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell41;

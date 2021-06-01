@@ -7,7 +7,8 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using DAL;
+using DevExpress.XtraReports.UI;
 namespace frmMain.GUI
 {
     public partial class frmMedicalBill : DevExpress.XtraEditors.XtraForm
@@ -29,6 +30,14 @@ namespace frmMain.GUI
                 
             }
             
+        }
+        ReportDAL hd = new ReportDAL();
+        private void btnChoKham_Click(object sender, EventArgs e)
+        {
+            rpKhamBenh rphd = new rpKhamBenh();
+            //int mabn = int.Parse(cbTenBenhNhan.EditValue.ToString());
+            rphd.DataSource = hd.phieuKhamBenh(1);
+            rphd.ShowPreviewDialog();
         }
     }
 }

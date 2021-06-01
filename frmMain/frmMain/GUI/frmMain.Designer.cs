@@ -49,6 +49,7 @@
             this.btnDaKhoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnThuNgan = new DevExpress.XtraBars.BarButtonItem();
             this.btnLayThuoc = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNhapHang = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -64,7 +65,7 @@
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNhapHang = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,10 +93,11 @@
             this.btnDaKhoa,
             this.btnThuNgan,
             this.btnLayThuoc,
-            this.btnNhapHang});
+            this.btnNhapHang,
+            this.barButtonItem4});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 22;
+            this.ribbonControl1.MaxItemId = 23;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -105,23 +107,23 @@
             this.ribbonPage3,
             this.ribbonPage4});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1102, 184);
+            this.ribbonControl1.Size = new System.Drawing.Size(1102, 194);
             // 
             // btnNhaCC
             // 
             this.btnNhaCC.Caption = "Nhà Cung Cấp";
-            this.btnNhaCC.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNhaCC.Glyph")));
             this.btnNhaCC.Id = 1;
-            this.btnNhaCC.LargeGlyph = global::frmMain.Properties.Resources.Office_Customer_Male_Light_icon;
+            this.btnNhaCC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhaCC.ImageOptions.Image")));
+            this.btnNhaCC.ImageOptions.LargeImage = global::frmMain.Properties.Resources.Office_Customer_Male_Light_icon;
             this.btnNhaCC.Name = "btnNhaCC";
             this.btnNhaCC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhaCC_ItemClick);
             // 
             // btnLoaiThuoc
             // 
             this.btnLoaiThuoc.Caption = "Loại Thuốc";
-            this.btnLoaiThuoc.Glyph = ((System.Drawing.Image)(resources.GetObject("btnLoaiThuoc.Glyph")));
             this.btnLoaiThuoc.Id = 2;
-            this.btnLoaiThuoc.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnLoaiThuoc.LargeGlyph")));
+            this.btnLoaiThuoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoaiThuoc.ImageOptions.Image")));
+            this.btnLoaiThuoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLoaiThuoc.ImageOptions.LargeImage")));
             this.btnLoaiThuoc.Name = "btnLoaiThuoc";
             this.btnLoaiThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiThuoc_ItemClick);
             // 
@@ -129,7 +131,7 @@
             // 
             this.btnThuoc.Caption = "Thuốc";
             this.btnThuoc.Id = 3;
-            this.btnThuoc.LargeGlyph = global::frmMain.Properties.Resources.pill_icon;
+            this.btnThuoc.ImageOptions.LargeImage = global::frmMain.Properties.Resources.pill_icon;
             this.btnThuoc.Name = "btnThuoc";
             this.btnThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThuoc_ItemClick);
             // 
@@ -137,29 +139,29 @@
             // 
             this.btnNhapThuoc.Caption = "Nhập Thuốc";
             this.btnNhapThuoc.Id = 4;
-            this.btnNhapThuoc.LargeGlyph = global::frmMain.Properties.Resources.Mimetypes_bz_2_icon;
+            this.btnNhapThuoc.ImageOptions.LargeImage = global::frmMain.Properties.Resources.Mimetypes_bz_2_icon;
             this.btnNhapThuoc.Name = "btnNhapThuoc";
             // 
             // btnThongKeBH
             // 
             this.btnThongKeBH.Caption = "Thống Kê Bán Hàng";
             this.btnThongKeBH.Id = 5;
-            this.btnThongKeBH.LargeGlyph = global::frmMain.Properties.Resources.chart_icon;
+            this.btnThongKeBH.ImageOptions.LargeImage = global::frmMain.Properties.Resources.chart_icon;
             this.btnThongKeBH.Name = "btnThongKeBH";
             // 
             // btnThongKeNH
             // 
             this.btnThongKeNH.Caption = "Thống Kê Nhập Hàng";
             this.btnThongKeNH.Id = 6;
-            this.btnThongKeNH.LargeGlyph = global::frmMain.Properties.Resources.Mimetypes_gnome_mime_application_vnd_lotus_1_2_3_icon;
+            this.btnThongKeNH.ImageOptions.LargeImage = global::frmMain.Properties.Resources.Mimetypes_gnome_mime_application_vnd_lotus_1_2_3_icon;
             this.btnThongKeNH.Name = "btnThongKeNH";
             // 
             // btnNhanVien
             // 
             this.btnNhanVien.Caption = "Nhân Viên";
-            this.btnNhanVien.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Glyph")));
             this.btnNhanVien.Id = 7;
-            this.btnNhanVien.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.LargeGlyph")));
+            this.btnNhanVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.ImageOptions.Image")));
+            this.btnNhanVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.ImageOptions.LargeImage")));
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhanVien_ItemClick);
             // 
@@ -173,31 +175,31 @@
             // 
             this.barButtonItem2.Caption = "Tài Khoản";
             this.barButtonItem2.Id = 10;
-            this.barButtonItem2.LargeGlyph = global::frmMain.Properties.Resources.client_account_template_icon;
+            this.barButtonItem2.ImageOptions.LargeImage = global::frmMain.Properties.Resources.client_account_template_icon;
             this.barButtonItem2.Name = "barButtonItem2";
             // 
             // barButtonItem3
             // 
             this.barButtonItem3.Caption = "Đăng Xuất";
-            this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
             this.barButtonItem3.Id = 11;
-            this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
             this.barButtonItem3.Name = "barButtonItem3";
             // 
             // btnBanThuoc
             // 
             this.btnBanThuoc.Caption = "Bán Thuốc";
             this.btnBanThuoc.Id = 12;
-            this.btnBanThuoc.LargeGlyph = global::frmMain.Properties.Resources.payment_icon__1_;
+            this.btnBanThuoc.ImageOptions.LargeImage = global::frmMain.Properties.Resources.payment_icon__1_;
             this.btnBanThuoc.Name = "btnBanThuoc";
             this.btnBanThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // btnViTri
             // 
             this.btnViTri.Caption = "Vị Trí";
-            this.btnViTri.Glyph = ((System.Drawing.Image)(resources.GetObject("btnViTri.Glyph")));
             this.btnViTri.Id = 13;
-            this.btnViTri.LargeGlyph = global::frmMain.Properties.Resources.Location_icon;
+            this.btnViTri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnViTri.ImageOptions.Image")));
+            this.btnViTri.ImageOptions.LargeImage = global::frmMain.Properties.Resources.Location_icon;
             this.btnViTri.Name = "btnViTri";
             this.btnViTri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViTri_ItemClick);
             // 
@@ -205,7 +207,7 @@
             // 
             this.btnDatHang.Caption = "Đặt Hàng";
             this.btnDatHang.Id = 14;
-            this.btnDatHang.LargeGlyph = global::frmMain.Properties.Resources.Order_history_icon;
+            this.btnDatHang.ImageOptions.LargeImage = global::frmMain.Properties.Resources.Order_history_icon;
             this.btnDatHang.Name = "btnDatHang";
             this.btnDatHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDatHang_ItemClick);
             // 
@@ -213,7 +215,7 @@
             // 
             this.btnKhamBenh.Caption = "Khám Bệnh";
             this.btnKhamBenh.Id = 15;
-            this.btnKhamBenh.LargeGlyph = global::frmMain.Properties.Resources.stethoscope_icon;
+            this.btnKhamBenh.ImageOptions.LargeImage = global::frmMain.Properties.Resources.stethoscope_icon;
             this.btnKhamBenh.Name = "btnKhamBenh";
             this.btnKhamBenh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhamBenh_ItemClick);
             // 
@@ -221,7 +223,7 @@
             // 
             this.btnXetNghiem.Caption = "Xét Nghiệm";
             this.btnXetNghiem.Id = 16;
-            this.btnXetNghiem.LargeGlyph = global::frmMain.Properties.Resources.Test_tubes_icon;
+            this.btnXetNghiem.ImageOptions.LargeImage = global::frmMain.Properties.Resources.Test_tubes_icon;
             this.btnXetNghiem.Name = "btnXetNghiem";
             this.btnXetNghiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXetNghiem_ItemClick);
             // 
@@ -229,7 +231,7 @@
             // 
             this.btnTiepNhan.Caption = "Tiếp Nhận Bệnh Nhân";
             this.btnTiepNhan.Id = 17;
-            this.btnTiepNhan.LargeGlyph = global::frmMain.Properties.Resources.Doctor_icon;
+            this.btnTiepNhan.ImageOptions.LargeImage = global::frmMain.Properties.Resources.Doctor_icon;
             this.btnTiepNhan.Name = "btnTiepNhan";
             this.btnTiepNhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
@@ -237,7 +239,7 @@
             // 
             this.btnDaKhoa.Caption = "Đa Khoa";
             this.btnDaKhoa.Id = 18;
-            this.btnDaKhoa.LargeGlyph = global::frmMain.Properties.Resources.People_Doctor_Male_icon;
+            this.btnDaKhoa.ImageOptions.LargeImage = global::frmMain.Properties.Resources.People_Doctor_Male_icon;
             this.btnDaKhoa.Name = "btnDaKhoa";
             this.btnDaKhoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDaKhoa_ItemClick);
             // 
@@ -245,7 +247,7 @@
             // 
             this.btnThuNgan.Caption = "Thu Ngân";
             this.btnThuNgan.Id = 19;
-            this.btnThuNgan.LargeGlyph = global::frmMain.Properties.Resources.Cashier_2_icon;
+            this.btnThuNgan.ImageOptions.LargeImage = global::frmMain.Properties.Resources.Cashier_2_icon;
             this.btnThuNgan.Name = "btnThuNgan";
             this.btnThuNgan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThuNgan_ItemClick);
             // 
@@ -253,9 +255,18 @@
             // 
             this.btnLayThuoc.Caption = "Lấy Thuốc";
             this.btnLayThuoc.Id = 20;
-            this.btnLayThuoc.LargeGlyph = global::frmMain.Properties.Resources.medicine_cart_icon;
+            this.btnLayThuoc.ImageOptions.LargeImage = global::frmMain.Properties.Resources.medicine_cart_icon;
             this.btnLayThuoc.Name = "btnLayThuoc";
             this.btnLayThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLayThuoc_ItemClick);
+            // 
+            // btnNhapHang
+            // 
+            this.btnNhapHang.Caption = "Nhập Hàng";
+            this.btnNhapHang.Id = 21;
+            this.btnNhapHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapHang.ImageOptions.Image")));
+            this.btnNhapHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhapHang.ImageOptions.LargeImage")));
+            this.btnNhapHang.Name = "btnNhapHang";
+            this.btnNhapHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -366,17 +377,14 @@
             // 
             this.barButtonItem1.Caption = "Tài Khoản";
             this.barButtonItem1.Id = 9;
-            this.barButtonItem1.LargeGlyph = global::frmMain.Properties.Resources.client_account_template_icon;
+            this.barButtonItem1.ImageOptions.LargeImage = global::frmMain.Properties.Resources.client_account_template_icon;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // btnNhapHang
+            // barButtonItem4
             // 
-            this.btnNhapHang.Caption = "Nhập Hàng";
-            this.btnNhapHang.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNhapHang.Glyph")));
-            this.btnNhapHang.Id = 21;
-            this.btnNhapHang.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNhapHang.LargeGlyph")));
-            this.btnNhapHang.Name = "btnNhapHang";
-            this.btnNhapHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 22;
+            this.barButtonItem4.Name = "barButtonItem4";
             // 
             // frmMain
             // 
@@ -437,6 +445,7 @@
         private DevExpress.XtraBars.BarButtonItem btnThuNgan;
         private DevExpress.XtraBars.BarButtonItem btnLayThuoc;
         private DevExpress.XtraBars.BarButtonItem btnNhapHang;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
     }
 }
 

@@ -227,6 +227,12 @@
     <Compile Include="GUI\rpHoaDon.Designer.cs">
       <DependentUpon>rpHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\rpKhamBenh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\rpKhamBenh.Designer.cs">
+      <DependentUpon>rpKhamBenh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\frmCashier.resx">
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\rpHoaDon.resx">
       <DependentUpon>rpHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\rpKhamBenh.resx">
+      <DependentUpon>rpKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
