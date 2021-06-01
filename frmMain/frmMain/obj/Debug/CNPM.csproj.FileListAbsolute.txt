@@ -401,6 +401,7 @@ D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\ja\DevExpress.Web.v17.1
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\ru\DevExpress.Web.v17.1.resources.dll
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\DevExpress.RichEdit.v17.1.Export.dll
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpBenhNhan.resources
+<<<<<<< HEAD
 C:\Users\Huy\Desktop\Git\CNPM\frmMain\frmMain\bin\Debug\frmMain.exe.config
 C:\Users\Huy\Desktop\Git\CNPM\frmMain\frmMain\obj\Debug\frmMain.exe
 C:\Users\Huy\Desktop\Git\CNPM\frmMain\frmMain\obj\Debug\frmMain.pdb
@@ -433,3 +434,9 @@ C:\Users\Huy\Desktop\Git\CNPM\frmMain\frmMain\bin\Debug\DAL.dll
 C:\Users\Huy\Desktop\Git\CNPM\frmMain\frmMain\bin\Debug\BLL.dll
 C:\Users\Huy\Desktop\Git\CNPM\frmMain\frmMain\bin\Debug\DAL.pdb
 C:\Users\Huy\Desktop\Git\CNPM\frmMain\frmMain\bin\Debug\BLL.pdb
+=======
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpHoaDon.resources
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpKhamBenh.resources
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpDatHang.resources
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpNhapHang.resources
+>>>>>>> 8588eedd7ac7988d8af8ff2c8ca79203a7d69b90

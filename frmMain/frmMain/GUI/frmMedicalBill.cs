@@ -8,6 +8,10 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAL;
+<<<<<<< HEAD
+=======
+using DevExpress.XtraReports.UI;
+>>>>>>> 8588eedd7ac7988d8af8ff2c8ca79203a7d69b90
 namespace frmMain.GUI
 {
     public partial class frmMedicalBill : DevExpress.XtraEditors.XtraForm
@@ -46,6 +50,7 @@ namespace frmMain.GUI
             }
             
         }
+<<<<<<< HEAD
 
 
 
@@ -79,6 +84,15 @@ namespace frmMain.GUI
         void load_PhieuKhamBenh() {
             dgvPhieuKhamBenh.DataSource = dspkb;
             dspkb.DataSource = pkb.load_PhieuKhamBenh();
+=======
+        ReportDAL hd = new ReportDAL();
+        private void btnChoKham_Click(object sender, EventArgs e)
+        {
+            rpKhamBenh rphd = new rpKhamBenh();
+            int mabn = int.Parse(cbTenBenhNhan.EditValue.ToString());
+            rphd.DataSource = hd.phieuKhamBenh(mabn);
+            rphd.ShowPreviewDialog();
+>>>>>>> 8588eedd7ac7988d8af8ff2c8ca79203a7d69b90
         }
     }
 }

@@ -7,7 +7,8 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using DAL;
+using DevExpress.XtraReports.UI;
 namespace frmMain.GUI
 {
     public partial class frmOrder : DevExpress.XtraEditors.XtraForm
@@ -51,6 +52,14 @@ namespace frmMain.GUI
 
 
             }
+        }
+        ReportDAL rp = new ReportDAL();
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            rpDatHang a = new rpDatHang();
+            string b = "1";
+            a.DataSource = rp.datHang(b);
+            a.ShowPreviewDialog();
         }
     }
 }
