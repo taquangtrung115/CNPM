@@ -16,5 +16,19 @@ namespace frmMain.GUI
         {
             InitializeComponent();
         }
+
+        private void frmMedicalBill_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupControl1_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
+        {
+            if (e.Button.Properties.Caption == "Tải Lại")
+            {
+                
+            }
+            
+        }
     }
 }

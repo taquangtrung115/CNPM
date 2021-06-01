@@ -41,14 +41,12 @@
             this.btnTim = new DevExpress.XtraEditors.SimpleButton();
             this.txtTim = new DevExpress.XtraEditors.TextEdit();
             this.txtTenNguoiThan = new DevExpress.XtraEditors.TextEdit();
-            this.txtGioiTinh = new DevExpress.XtraEditors.TextEdit();
             this.txtTenBN = new DevExpress.XtraEditors.TextEdit();
             this.txtCanNang = new DevExpress.XtraEditors.TextEdit();
             this.txtNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -56,6 +54,8 @@
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.cbGioiTinh = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -65,7 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNguoiThan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGioiTinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCanNang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
@@ -73,7 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
@@ -81,6 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbGioiTinh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -102,13 +102,13 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cbGioiTinh);
             this.layoutControl1.Controls.Add(this.btnLapPhieu);
             this.layoutControl1.Controls.Add(this.txtSDTNguoiThan);
             this.layoutControl1.Controls.Add(this.dgvDieuDuong);
             this.layoutControl1.Controls.Add(this.btnTim);
             this.layoutControl1.Controls.Add(this.txtTim);
             this.layoutControl1.Controls.Add(this.txtTenNguoiThan);
-            this.layoutControl1.Controls.Add(this.txtGioiTinh);
             this.layoutControl1.Controls.Add(this.txtTenBN);
             this.layoutControl1.Controls.Add(this.txtCanNang);
             this.layoutControl1.Controls.Add(this.txtNgaySinh);
@@ -186,14 +186,6 @@
             this.txtTenNguoiThan.StyleController = this.layoutControl1;
             this.txtTenNguoiThan.TabIndex = 8;
             // 
-            // txtGioiTinh
-            // 
-            this.txtGioiTinh.Location = new System.Drawing.Point(121, 72);
-            this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(1053, 22);
-            this.txtGioiTinh.StyleController = this.layoutControl1;
-            this.txtGioiTinh.TabIndex = 7;
-            // 
             // txtTenBN
             // 
             this.txtTenBN.Location = new System.Drawing.Point(121, 16);
@@ -234,14 +226,14 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2,
             this.layoutControlItem3,
-            this.layoutControlItem4,
             this.layoutControlItem1,
             this.layoutControlItem5,
             this.layoutControlItem9,
             this.layoutControlItem10,
             this.layoutControlItem11,
             this.layoutControlItem6,
-            this.layoutControlItem12});
+            this.layoutControlItem12,
+            this.layoutControlItem4});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 4;
@@ -265,15 +257,6 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(1164, 28);
             this.layoutControlItem3.Text = "Ngày Sinh";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(101, 16);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.txtGioiTinh;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 56);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1164, 28);
-            this.layoutControlItem4.Text = "Giới Tính";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(101, 17);
             // 
             // layoutControlItem1
             // 
@@ -339,6 +322,25 @@
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.Location = new System.Drawing.Point(121, 72);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbGioiTinh.Size = new System.Drawing.Size(1053, 22);
+            this.cbGioiTinh.StyleController = this.layoutControl1;
+            this.cbGioiTinh.TabIndex = 17;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.cbGioiTinh;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(1164, 28);
+            this.layoutControlItem4.Text = "Giới Tính";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(101, 17);
+            // 
             // frmStaffNursing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -359,7 +361,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNguoiThan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGioiTinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCanNang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties.CalendarTimeProperties)).EndInit();
@@ -367,7 +368,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
@@ -375,6 +375,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbGioiTinh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -389,13 +391,11 @@
         private DevExpress.XtraEditors.SimpleButton btnTim;
         private DevExpress.XtraEditors.TextEdit txtTim;
         private DevExpress.XtraEditors.TextEdit txtTenNguoiThan;
-        private DevExpress.XtraEditors.TextEdit txtGioiTinh;
         private DevExpress.XtraEditors.TextEdit txtTenBN;
         private DevExpress.XtraEditors.TextEdit txtCanNang;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
@@ -405,5 +405,7 @@
         private DevExpress.XtraEditors.DateEdit txtNgaySinh;
         private DevExpress.XtraEditors.SimpleButton btnLapPhieu;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.LookUpEdit cbGioiTinh;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions5 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCashier));
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions6 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions7 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions8 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.dgvThuNgan = new DevExpress.XtraGrid.GridControl();
@@ -66,17 +70,22 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.layoutControl1);
+            buttonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("buttonImageOptions5.Image")));
+            buttonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("buttonImageOptions6.Image")));
+            buttonImageOptions7.Image = ((System.Drawing.Image)(resources.GetObject("buttonImageOptions7.Image")));
+            buttonImageOptions8.Image = global::frmMain.Properties.Resources.payment_icon__1_;
             this.groupControl1.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Tải Lại", ((System.Drawing.Image)(resources.GetObject("groupControl1.CustomHeaderButtons")))),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Thống Kê Bệnh Nhân", ((System.Drawing.Image)(resources.GetObject("groupControl1.CustomHeaderButtons1")))),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Thống Kê Doanh Thu", ((System.Drawing.Image)(resources.GetObject("groupControl1.CustomHeaderButtons2")))),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Bệnh Nhân Đã Thanh Toán", global::frmMain.Properties.Resources.payment_icon__1_)});
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Tải Lại", true, buttonImageOptions5),
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Thống Kê Bệnh Nhân", true, buttonImageOptions6),
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Thống Kê Doanh Thu", true, buttonImageOptions7),
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Bệnh Nhân Đã Thanh Toán", true, buttonImageOptions8)});
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(735, 516);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.CustomButtonClick += new DevExpress.XtraBars.Docking2010.BaseButtonEventHandler(this.groupControl1_CustomButtonClick);
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // layoutControl1
             // 
@@ -161,7 +170,7 @@
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Image = global::frmMain.Properties.Resources.Cash_icon;
+            this.btnThanhToan.ImageOptions.Image = global::frmMain.Properties.Resources.Cash_icon;
             this.btnThanhToan.Location = new System.Drawing.Point(409, 16);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(306, 56);
@@ -253,6 +262,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Nhân Viên Thu Ngân";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmCashier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
