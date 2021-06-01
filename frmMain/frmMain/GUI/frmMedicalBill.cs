@@ -35,8 +35,8 @@ namespace frmMain.GUI
         private void btnChoKham_Click(object sender, EventArgs e)
         {
             rpKhamBenh rphd = new rpKhamBenh();
-            //int mabn = int.Parse(cbTenBenhNhan.EditValue.ToString());
-            rphd.DataSource = hd.phieuKhamBenh(1);
+            int mabn = int.Parse(cbTenBenhNhan.EditValue.ToString());
+            rphd.DataSource = hd.phieuKhamBenh(mabn);
             rphd.ShowPreviewDialog();
         }
     }
