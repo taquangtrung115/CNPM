@@ -24,5 +24,17 @@ namespace BLL
             da.Fill(ds, "dsPK");
             return ds.Tables["dsPK"];
         }
+        public DataTable datHang(string maDH)
+        {
+            da = new SqlDataAdapter("exec rpDatHang '" + maDH + "'", cnn);
+            da.Fill(ds, "dsDH");
+            return ds.Tables["dsDH"];
+        }
+        public DataTable nhapHang(string maNH)
+        {
+            da = new SqlDataAdapter("exec rpNhapHang '" + maNH + "'", cnn);
+            da.Fill(ds, "dsNH");
+            return ds.Tables["dsNH"];
+        }
     }
 }

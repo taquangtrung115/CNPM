@@ -221,6 +221,12 @@
     <Compile Include="GUI\rpBenhNhan.Designer.cs">
       <DependentUpon>rpBenhNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\rpDatHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\rpDatHang.Designer.cs">
+      <DependentUpon>rpDatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\rpHoaDon.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -232,6 +238,12 @@
     </Compile>
     <Compile Include="GUI\rpKhamBenh.Designer.cs">
       <DependentUpon>rpKhamBenh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\rpNhapHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\rpNhapHang.Designer.cs">
+      <DependentUpon>rpNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -289,11 +301,17 @@
     <EmbeddedResource Include="GUI\rpBenhNhan.resx">
       <DependentUpon>rpBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\rpDatHang.resx">
+      <DependentUpon>rpDatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\rpHoaDon.resx">
       <DependentUpon>rpHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\rpKhamBenh.resx">
       <DependentUpon>rpKhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\rpNhapHang.resx">
+      <DependentUpon>rpNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

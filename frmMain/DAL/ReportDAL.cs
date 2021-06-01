@@ -20,5 +20,15 @@ namespace DAL
 
             return hd.phieuKhamBenh(maBN);
         }
+        public DataTable datHang(string maDH)
+        {
+
+            return hd.datHang(maDH);
+        }
+        public DataTable nhapHang(string maNH)
+        {
+
+            return hd.nhapHang(maNH);
+        }
     }
 }
