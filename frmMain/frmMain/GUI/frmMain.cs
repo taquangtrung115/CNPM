@@ -20,7 +20,15 @@ namespace frmMain
         }
         private static string chucVu;
 
-        public static string ChucVu { get => chucVu; set => chucVu = value; }
+        public static string ChucVu { get
+                                      {
+                                          return chucVu;
+                                      }
+            set
+            {
+                 chucVu = value;
+            }
+        }
 
         public frmMain(string chucvu)
         {

@@ -7,11 +7,15 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using DAL;
 namespace frmMain.GUI
 {
     public partial class frmMedicalBill : DevExpress.XtraEditors.XtraForm
     {
+        NhanVienDAL nv = new NhanVienDAL();
+        BangGiaKhamBenhDAL bgkb = new BangGiaKhamBenhDAL();
+        PhieuKhamBenhDAL pkb = new PhieuKhamBenhDAL();
+        BindingSource dspkb = new BindingSource();
         public frmMedicalBill()
         {
             InitializeComponent();
@@ -19,7 +23,19 @@ namespace frmMain.GUI
 
         private void frmMedicalBill_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                txtNhanVien.Text = layTTNV().Rows[0].ItemArray[1].ToString();
+            }
+            catch (Exception)
+            {
+                txtNhanVien.Text = "Loi";
+        
+            }
+        
+            comBoBox_TrangThai();
+            comBoBox_BangGiaKhamBenh();
+            txtNgayLap.Text = DateTime.Now.ToShortDateString();
         }
 
         private void groupControl1_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
@@ -29,6 +45,40 @@ namespace frmMain.GUI
                 
             }
             
+        }
+
+
+
+
+        ////////////////////////Ham///////////
+        void comBoBox_TrangThai()
+        {
+            DataTable dtblDataSource = new DataTable();
+            dtblDataSource.Columns.Add("MaTrangThai");
+            dtblDataSource.Columns.Add("TenTrangThai");
+
+            dtblDataSource.Rows.Add("ChoThucHien", "Chờ Thực Hiện");
+            dtblDataSource.Rows.Add("ChuaThucHien", "Chưa Thực Hiện");
+
+
+            cbTrangThai.Properties.DisplayMember = "TenTrangThai";
+            cbTrangThai.Properties.ValueMember = "MaTrangThai";
+            cbTrangThai.Properties.DataSource = dtblDataSource;
+            cbTrangThai.ItemIndex = 0;
+        }
+        void comBoBox_BangGiaKhamBenh() {
+            cbGiaKham.Properties.DisplayMember = "HINHTHUCKHAM";
+            cbGiaKham.Properties.ValueMember = "MAGIAKHAM";
+            cbGiaKham.Properties.DataSource = bgkb.load_BangGiaKhamBenh();
+            cbTrangThai.ItemIndex = 0;
+        }
+
+        DataTable layTTNV() {
+            return nv.layTTNhanVien(frmLogin.ControlID.textData.ToString());
+        }
+        void load_PhieuKhamBenh() {
+            dgvPhieuKhamBenh.DataSource = dspkb;
+            dspkb.DataSource = pkb.load_PhieuKhamBenh();
         }
     }
 }

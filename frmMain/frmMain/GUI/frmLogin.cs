@@ -16,6 +16,10 @@ namespace frmMain.GUI
         {
             InitializeComponent();
         }
+        public static class ControlID
+        {
+            public static string textData{ get; set; }
+        }
         public static string chucVu = "";
         DangNhapDAL dn = new DangNhapDAL();
         private void btnLogin_Click(object sender, EventArgs e)
@@ -24,6 +28,7 @@ namespace frmMain.GUI
             {
                
                 frmMain b = new frmMain(dn.layCHucVu(txtUsername.Text,txtPassword.Text).ToString());
+                ControlID.textData = txtUsername.Text;
                 this.Hide();
                 b.ShowDialog();
 

@@ -10,7 +10,7 @@ namespace BLL
    public class DangNhapBLL
     {
         DataSet ds = new DataSet();
-        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
+        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-1RP7O2E\\SQLEXPRESS;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=sa2012");
 
         public bool login(string taiKhoan, string matKhau)
         {
@@ -32,6 +32,7 @@ namespace BLL
         public string layChucVu(string taiKhoan, string matKhau)
         {
             string id = "";
+            
             SqlCommand cmd = new SqlCommand("SELECT * FROM NHANVIEN WHERE tendangnhap = '" + taiKhoan + "' and MatKhau = '" + matKhau + "'", cnn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -40,6 +41,7 @@ namespace BLL
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
+                    
                         id = dr["CHUCVU"].ToString();
                     }
                 }

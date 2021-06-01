@@ -53,5 +53,8 @@ namespace DAL
         //    return nv.findGridView(tenNV);
         //}
 
+        public DataTable layTTNhanVien(string tenDangNhap) {
+            return nv.layThongTinNhanVien(tenDangNhap);
+        }
     }
 }

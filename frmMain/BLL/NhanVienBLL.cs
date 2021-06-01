@@ -9,7 +9,7 @@ namespace BLL
     public class NhanVienBLL
     {
         DataSet ds = new DataSet();
-        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
+        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-1RP7O2E\\SQLEXPRESS;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=sa2012");
         SqlDataAdapter da;
 
         public DataTable loadGridView()
@@ -37,6 +37,13 @@ namespace BLL
         //    return ds.Tables["dsNV"];
             
         //}
+
+        public DataTable layThongTinNhanVien(string tenDangNhap) {
+            da = new SqlDataAdapter("select NHANVIEN.MANV,NHANVIEN.TENNV from NHANVIEN where TENDANGNHAP=N'" + tenDangNhap + "'", cnn);
+      
+            da.Fill(ds,"NV");
+            return ds.Tables["NV"];
+        }
         public bool them(string maNV, string tenNV, string tenDN, string matKhau, string ngaySinh, string gioiTinh, string diaChi, string gmail, string sDT,string chucVu,double luongCB, double hSL,double luong, string maKhoa)
         {
             try
