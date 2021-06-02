@@ -439,3 +439,4 @@ D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpKhamBenh.
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpDatHang.resources
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.rpNhapHang.resources
 >>>>>>> 8588eedd7ac7988d8af8ff2c8ca79203a7d69b90
+D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\DAL.dll
