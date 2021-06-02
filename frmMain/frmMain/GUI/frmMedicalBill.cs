@@ -95,5 +95,10 @@ namespace frmMain.GUI
 
             //}
         }
+
+        private void btnChoKham_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

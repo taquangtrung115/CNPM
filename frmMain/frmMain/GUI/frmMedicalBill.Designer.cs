@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicalBill));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtDeNghiKham = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenBN = new DevExpress.XtraEditors.TextEdit();
             this.cbTrangThai = new DevExpress.XtraEditors.LookUpEdit();
             this.cbHinhThucKham = new DevExpress.XtraEditors.LookUpEdit();
             this.txtTinhTrangSK = new DevExpress.XtraEditors.TextEdit();
@@ -50,14 +52,14 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtTenBN = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtDeNghiKham = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDeNghiKham.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTrangThai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbHinhThucKham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTinhTrangSK.Properties)).BeginInit();
@@ -76,9 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDeNghiKham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +115,22 @@
             this.layoutControl1.Size = new System.Drawing.Size(1128, 596);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txtDeNghiKham
+            // 
+            this.txtDeNghiKham.Location = new System.Drawing.Point(149, 156);
+            this.txtDeNghiKham.Name = "txtDeNghiKham";
+            this.txtDeNghiKham.Size = new System.Drawing.Size(963, 22);
+            this.txtDeNghiKham.StyleController = this.layoutControl1;
+            this.txtDeNghiKham.TabIndex = 24;
+            // 
+            // txtTenBN
+            // 
+            this.txtTenBN.Location = new System.Drawing.Point(149, 16);
+            this.txtTenBN.Name = "txtTenBN";
+            this.txtTenBN.Size = new System.Drawing.Size(963, 22);
+            this.txtTenBN.StyleController = this.layoutControl1;
+            this.txtTenBN.TabIndex = 23;
             // 
             // cbTrangThai
             // 
@@ -165,7 +181,7 @@
             this.btnChoKham.StyleController = this.layoutControl1;
             this.btnChoKham.TabIndex = 15;
             this.btnChoKham.Text = "Chờ Khám";
-     
+            this.btnChoKham.Click += new System.EventHandler(this.btnChoKham_Click);
             // 
             // dgvPhieuKhamBenh
             // 
@@ -304,14 +320,6 @@
             this.layoutControlItem1.Text = "Trạng Thái";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(129, 17);
             // 
-            // txtTenBN
-            // 
-            this.txtTenBN.Location = new System.Drawing.Point(149, 16);
-            this.txtTenBN.Name = "txtTenBN";
-            this.txtTenBN.Size = new System.Drawing.Size(963, 22);
-            this.txtTenBN.StyleController = this.layoutControl1;
-            this.txtTenBN.TabIndex = 23;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtTenBN;
@@ -320,14 +328,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(1102, 28);
             this.layoutControlItem2.Text = "Tên Bệnh Nhân";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(129, 17);
-            // 
-            // txtDeNghiKham
-            // 
-            this.txtDeNghiKham.Location = new System.Drawing.Point(149, 156);
-            this.txtDeNghiKham.Name = "txtDeNghiKham";
-            this.txtDeNghiKham.Size = new System.Drawing.Size(963, 22);
-            this.txtDeNghiKham.StyleController = this.layoutControl1;
-            this.txtDeNghiKham.TabIndex = 24;
             // 
             // layoutControlItem7
             // 
@@ -353,6 +353,8 @@
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtDeNghiKham.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTrangThai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbHinhThucKham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTinhTrangSK.Properties)).EndInit();
@@ -371,9 +373,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDeNghiKham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 

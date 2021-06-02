@@ -17,7 +17,7 @@ namespace frmMain.GUI
         {
             InitializeComponent();
         }
-        
+        BenhNhanDAL bn = new BenhNhanDAL();
         private void groupControl1_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
         {
             //Các nút thêm, xóa, sửa...
@@ -32,7 +32,9 @@ namespace frmMain.GUI
             else if (e.Button.Properties.Caption == "Thống Kê Bệnh Nhân")
             {
                 rpBenhNhan a = new rpBenhNhan();
-                a.ShowPreviewDialog();
+                
+                ReportPrintTool tool = new ReportPrintTool(a);
+                tool.ShowPreviewDialog();
             }
             else if (e.Button.Properties.Caption == "Thống Kê Doanh Thu")
             {
