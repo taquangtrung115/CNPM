@@ -18,7 +18,7 @@ namespace frmMain.GUI
 
         BenhNhanDAL bn = new BenhNhanDAL();
         BindingSource dsBN = new BindingSource();
-       
+
         public frmStaffNursing()
         {
             InitializeComponent();
@@ -43,8 +43,8 @@ namespace frmMain.GUI
             {
 
             }
-           
-            
+
+
         }
 
 
@@ -64,7 +64,8 @@ namespace frmMain.GUI
         /// <summary>
         /// ///////////////////
         /// </summary>
-        void comBoBox_GioiTinh() {
+        void comBoBox_GioiTinh()
+        {
             DataTable dtblDataSource = new DataTable();
             dtblDataSource.Columns.Add("Text");
             dtblDataSource.Columns.Add("Value");
@@ -78,22 +79,46 @@ namespace frmMain.GUI
             cbGioiTinh.Properties.DataSource = dtblDataSource;
             cbGioiTinh.ItemIndex = 0;
         }
-        void BidingSource() {
+        void BidingSource()
+        {
             txtTenBN.DataBindings.Add(new Binding("Text", dgvDieuDuong.DataSource, "TENNV", true, DataSourceUpdateMode.Never));
             txtNgaySinh.DataBindings.Add(new Binding("Text", dgvDieuDuong.DataSource, "NGAYSINH", true, DataSourceUpdateMode.Never));
             cbGioiTinh.DataBindings.Add(new Binding("Text", dgvDieuDuong.DataSource, "GIOITINH", true, DataSourceUpdateMode.Never));
         }
-        void load_GridView() {
+        void load_GridView()
+        {
             dgvDieuDuong.DataSource = dsBN;
             dsBN.DataSource = bn.loadGripView();
         }
 
         private void btnLapPhieu_Click(object sender, EventArgs e)
         {
-            frmMedicalBill form = new frmMedicalBill();
-           form.Show();
-        ////////////truyen du lieu///////////
-          
+            themBenhNhan();
+            load_GridView();
+            //frmMedicalBill form = new frmMedicalBill();
+            //form.Show();
+            ////////////truyen du lieu///////////
+
+        }
+        void themBenhNhan()
+        { Random rd = new Random();
+        int mabenhNhan = rd.Next(1, 10000);
+            try
+            {
+                bn.them(mabenhNhan, txtTenBN.Text, txtNgaySinh.DateTime.Date.ToShortDateString(), cbGioiTinh.EditValue.ToString(), txtDiaChi.Text, txtSDT.Text);
+                XtraMessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                load_GridView();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Thêm thất bại - Lỗi: " + ex.Message.ToString());
+
+            }
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            load_GridView();
         }
     }
 }

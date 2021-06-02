@@ -72,10 +72,10 @@ namespace frmMain.GUI
             cbTrangThai.ItemIndex = 0;
         }
         void comBoBox_BangGiaKhamBenh() {
-            //cbGiaKham.Properties.DisplayMember = "HINHTHUCKHAM";
-            //cbGiaKham.Properties.ValueMember = "MAGIAKHAM";
-            //cbGiaKham.Properties.DataSource = bgkb.load_BangGiaKhamBenh();
-            //cbTrangThai.ItemIndex = 0;
+            cbHinhThucKham.Properties.DisplayMember = "HINHTHUCKHAM";
+            cbHinhThucKham.Properties.ValueMember = "MAGIAKHAM";
+            cbHinhThucKham.Properties.DataSource = bgkb.load_BangGiaKhamBenh();
+            cbTrangThai.ItemIndex = 0;
         }
 
         DataTable layTTNV() {
