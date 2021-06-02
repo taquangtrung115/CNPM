@@ -42,12 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangGiaKhamBenhDAL.cs" />
+    <Compile Include="BenhNhanDAL.cs" />
     <Compile Include="DangNhapDAL.cs" />
     <Compile Include="ReportDAL.cs" />
     <Compile Include="KhoaDAL.cs" />
     <Compile Include="LoaiThuocDAL.cs" />
     <Compile Include="NhanVienDAL.cs" />
     <Compile Include="NhaSanXuatDAL.cs" />
+    <Compile Include="PhieuKhamBenhDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThuocDAL.cs" />
     <Compile Include="ViTriDAL.cs" />

@@ -7,11 +7,18 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DAL;
+
+
 
 namespace frmMain.GUI
 {
     public partial class frmStaffNursing : DevExpress.XtraEditors.XtraForm
     {
+
+        BenhNhanDAL bn = new BenhNhanDAL();
+        BindingSource dsBN = new BindingSource();
+       
         public frmStaffNursing()
         {
             InitializeComponent();
@@ -36,13 +43,57 @@ namespace frmMain.GUI
             {
 
             }
+           
             
+        }
+
+
+
+        private void frmStaffNursing_Load(object sender, EventArgs e)
+        {
+
+            txtNgaySinh.Text = DateTime.Now.ToShortDateString();
+            comBoBox_GioiTinh();
+            load_GridView();
+
+
+
+
+        }
+
+        /// <summary>
+        /// ///////////////////
+        /// </summary>
+        void comBoBox_GioiTinh() {
+            DataTable dtblDataSource = new DataTable();
+            dtblDataSource.Columns.Add("Text");
+            dtblDataSource.Columns.Add("Value");
+
+            dtblDataSource.Rows.Add("Nam", "Nam");
+            dtblDataSource.Rows.Add("Nu", "Nu");
+
+
+            cbGioiTinh.Properties.DisplayMember = "Value";
+            cbGioiTinh.Properties.ValueMember = "Text";
+            cbGioiTinh.Properties.DataSource = dtblDataSource;
+            cbGioiTinh.ItemIndex = 0;
+        }
+        void BidingSource() {
+            txtTenBN.DataBindings.Add(new Binding("Text", dgvDieuDuong.DataSource, "TENNV", true, DataSourceUpdateMode.Never));
+            txtNgaySinh.DataBindings.Add(new Binding("Text", dgvDieuDuong.DataSource, "NGAYSINH", true, DataSourceUpdateMode.Never));
+            cbGioiTinh.DataBindings.Add(new Binding("Text", dgvDieuDuong.DataSource, "GIOITINH", true, DataSourceUpdateMode.Never));
+        }
+        void load_GridView() {
+            dgvDieuDuong.DataSource = dsBN;
+            dsBN.DataSource = bn.loadGripView();
         }
 
         private void btnLapPhieu_Click(object sender, EventArgs e)
         {
-            frmMedicalBill mdb = new frmMedicalBill();
-            mdb.ShowDialog();
+            frmMedicalBill form = new frmMedicalBill();
+           form.Show();
+        ////////////truyen du lieu///////////
+          
         }
     }
 }

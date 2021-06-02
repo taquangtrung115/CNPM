@@ -8,11 +8,18 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAL;
+<<<<<<< HEAD
+=======
 using DevExpress.XtraReports.UI;
+>>>>>>> 8588eedd7ac7988d8af8ff2c8ca79203a7d69b90
 namespace frmMain.GUI
 {
     public partial class frmMedicalBill : DevExpress.XtraEditors.XtraForm
     {
+        NhanVienDAL nv = new NhanVienDAL();
+        BangGiaKhamBenhDAL bgkb = new BangGiaKhamBenhDAL();
+        PhieuKhamBenhDAL pkb = new PhieuKhamBenhDAL();
+        BindingSource dspkb = new BindingSource();
         public frmMedicalBill()
         {
             InitializeComponent();
@@ -20,7 +27,19 @@ namespace frmMain.GUI
 
         private void frmMedicalBill_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                txtNhanVien.Text = layTTNV().Rows[0].ItemArray[1].ToString();
+            }
+            catch (Exception)
+            {
+                txtNhanVien.Text = "Loi";
+        
+            }
+        
+            comBoBox_TrangThai();
+            comBoBox_BangGiaKhamBenh();
+            txtNgayLap.Text = DateTime.Now.ToShortDateString();
         }
 
         private void groupControl1_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
@@ -31,6 +50,41 @@ namespace frmMain.GUI
             }
             
         }
+<<<<<<< HEAD
+
+
+
+
+        ////////////////////////Ham///////////
+        void comBoBox_TrangThai()
+        {
+            DataTable dtblDataSource = new DataTable();
+            dtblDataSource.Columns.Add("MaTrangThai");
+            dtblDataSource.Columns.Add("TenTrangThai");
+
+            dtblDataSource.Rows.Add("ChoThucHien", "Chờ Thực Hiện");
+            dtblDataSource.Rows.Add("ChuaThucHien", "Chưa Thực Hiện");
+
+
+            cbTrangThai.Properties.DisplayMember = "TenTrangThai";
+            cbTrangThai.Properties.ValueMember = "MaTrangThai";
+            cbTrangThai.Properties.DataSource = dtblDataSource;
+            cbTrangThai.ItemIndex = 0;
+        }
+        void comBoBox_BangGiaKhamBenh() {
+            cbGiaKham.Properties.DisplayMember = "HINHTHUCKHAM";
+            cbGiaKham.Properties.ValueMember = "MAGIAKHAM";
+            cbGiaKham.Properties.DataSource = bgkb.load_BangGiaKhamBenh();
+            cbTrangThai.ItemIndex = 0;
+        }
+
+        DataTable layTTNV() {
+            return nv.layTTNhanVien(frmLogin.ControlID.textData.ToString());
+        }
+        void load_PhieuKhamBenh() {
+            dgvPhieuKhamBenh.DataSource = dspkb;
+            dspkb.DataSource = pkb.load_PhieuKhamBenh();
+=======
         ReportDAL hd = new ReportDAL();
         private void btnChoKham_Click(object sender, EventArgs e)
         {
@@ -38,6 +92,7 @@ namespace frmMain.GUI
             int mabn = int.Parse(cbTenBenhNhan.EditValue.ToString());
             rphd.DataSource = hd.phieuKhamBenh(mabn);
             rphd.ShowPreviewDialog();
+>>>>>>> 8588eedd7ac7988d8af8ff2c8ca79203a7d69b90
         }
     }
 }

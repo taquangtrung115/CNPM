@@ -7,3 +7,10 @@ D:\CNPM\Thư mục mới\CNPM\frmMain\DAL\bin\Debug\BLL.pdb
 D:\CNPM\Thư mục mới\CNPM\frmMain\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 D:\CNPM\Thư mục mới\CNPM\frmMain\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\CNPM\Thư mục mới\CNPM\frmMain\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Huy\Desktop\Git\CNPM\frmMain\DAL\bin\Debug\DAL.dll
+C:\Users\Huy\Desktop\Git\CNPM\frmMain\DAL\bin\Debug\DAL.pdb
+C:\Users\Huy\Desktop\Git\CNPM\frmMain\DAL\bin\Debug\BLL.dll
+C:\Users\Huy\Desktop\Git\CNPM\frmMain\DAL\bin\Debug\BLL.pdb
+C:\Users\Huy\Desktop\Git\CNPM\frmMain\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Huy\Desktop\Git\CNPM\frmMain\DAL\obj\Debug\DAL.dll
+C:\Users\Huy\Desktop\Git\CNPM\frmMain\DAL\obj\Debug\DAL.pdb
