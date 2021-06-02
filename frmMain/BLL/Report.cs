@@ -9,9 +9,9 @@ namespace BLL
    public class Report
     {
         DataSet ds = new DataSet();
-        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
+        //SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
         SqlDataAdapter da;
-
+        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
         public DataTable loadBillByBillID(string maBN)
         {
             da = new SqlDataAdapter("exec HoaDon N'" + maBN + "'", cnn);

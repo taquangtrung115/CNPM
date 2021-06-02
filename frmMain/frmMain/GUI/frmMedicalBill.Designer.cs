@@ -165,7 +165,7 @@
             this.btnChoKham.StyleController = this.layoutControl1;
             this.btnChoKham.TabIndex = 15;
             this.btnChoKham.Text = "Chờ Khám";
-            this.btnChoKham.Click += new System.EventHandler(this.btnChoKham_Click);
+     
             // 
             // dgvPhieuKhamBenh
             // 

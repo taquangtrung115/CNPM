@@ -9,9 +9,9 @@ namespace BLL
     public class ThuocBLL
     {
         DataSet ds = new DataSet();
-        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
+       // SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
         SqlDataAdapter da;
-
+        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
         public DataTable loadGridView()
         {
             da = new SqlDataAdapter("select * from THUOC", cnn);

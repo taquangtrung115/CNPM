@@ -17,13 +17,10 @@ namespace frmMain.GUI
         {
             InitializeComponent();
         }
-        ReportDAL rp = new ReportDAL();
+      
         private void btnThem_Click(object sender, EventArgs e)
         {
-            rpNhapHang a = new rpNhapHang();
-            string b = "1";
-            a.DataSource = rp.datHang(b);
-            a.ShowPreviewDialog();
+            
         }
     }
 }

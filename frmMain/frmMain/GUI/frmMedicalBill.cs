@@ -8,10 +8,10 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAL;
-<<<<<<< HEAD
-=======
+
+
 using DevExpress.XtraReports.UI;
->>>>>>> 8588eedd7ac7988d8af8ff2c8ca79203a7d69b90
+
 namespace frmMain.GUI
 {
     public partial class frmMedicalBill : DevExpress.XtraEditors.XtraForm
@@ -34,9 +34,9 @@ namespace frmMain.GUI
             catch (Exception)
             {
                 txtNhanVien.Text = "Loi";
-        
+
             }
-        
+
             comBoBox_TrangThai();
             comBoBox_BangGiaKhamBenh();
             txtNgayLap.Text = DateTime.Now.ToShortDateString();
@@ -46,11 +46,11 @@ namespace frmMain.GUI
         {
             if (e.Button.Properties.Caption == "Tải Lại")
             {
-                
+
             }
-            
+
         }
-<<<<<<< HEAD
+
 
 
 
@@ -72,10 +72,10 @@ namespace frmMain.GUI
             cbTrangThai.ItemIndex = 0;
         }
         void comBoBox_BangGiaKhamBenh() {
-            cbGiaKham.Properties.DisplayMember = "HINHTHUCKHAM";
-            cbGiaKham.Properties.ValueMember = "MAGIAKHAM";
-            cbGiaKham.Properties.DataSource = bgkb.load_BangGiaKhamBenh();
-            cbTrangThai.ItemIndex = 0;
+            //cbGiaKham.Properties.DisplayMember = "HINHTHUCKHAM";
+            //cbGiaKham.Properties.ValueMember = "MAGIAKHAM";
+            //cbGiaKham.Properties.DataSource = bgkb.load_BangGiaKhamBenh();
+            //cbTrangThai.ItemIndex = 0;
         }
 
         DataTable layTTNV() {
@@ -84,15 +84,16 @@ namespace frmMain.GUI
         void load_PhieuKhamBenh() {
             dgvPhieuKhamBenh.DataSource = dspkb;
             dspkb.DataSource = pkb.load_PhieuKhamBenh();
-=======
-        ReportDAL hd = new ReportDAL();
-        private void btnChoKham_Click(object sender, EventArgs e)
-        {
-            rpKhamBenh rphd = new rpKhamBenh();
-            int mabn = int.Parse(cbTenBenhNhan.EditValue.ToString());
-            rphd.DataSource = hd.phieuKhamBenh(mabn);
-            rphd.ShowPreviewDialog();
->>>>>>> 8588eedd7ac7988d8af8ff2c8ca79203a7d69b90
+
+            ReportDAL hd = new ReportDAL();
+            //private void btnChoKham_Click(object sender, EventArgs e)
+            //{
+            //    //rpKhamBenh rphd = new rpKhamBenh();
+            //    //int mabn = int.Parse(cbTenBenhNhan.EditValue.ToString());
+            //    //rphd.DataSource = hd.phieuKhamBenh(mabn);
+            //    //rphd.ShowPreviewDialog();
+
+            //}
         }
     }
 }

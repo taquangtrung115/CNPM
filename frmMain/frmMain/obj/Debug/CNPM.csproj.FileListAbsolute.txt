@@ -43,7 +43,6 @@ D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.GUI.frmTest.res
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.Properties.Resources.resources
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\CNPM.csproj.GenerateResource.Cache
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\obj\Debug\frmMain.exe.licenses
-D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\DAL.dll
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\BLL.dll
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\DAL.pdb
 D:\CNPM\Thư mục mới\CNPM\frmMain\frmMain\bin\Debug\BLL.pdb

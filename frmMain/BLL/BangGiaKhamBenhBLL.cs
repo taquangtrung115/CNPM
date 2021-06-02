@@ -10,8 +10,8 @@ namespace BLL
   public  class BangGiaKhamBenhBLL
     {
         DataSet ds = new DataSet();
-        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-1RP7O2E\\SQLEXPRESS;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=sa2012");
-
+       // SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-1RP7O2E\\SQLEXPRESS;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=sa2012");
+        SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
         SqlDataAdapter da;
 
         public DataTable load_BangGiaKham()
@@ -23,7 +23,7 @@ namespace BLL
             ds.Tables["dsBGKB"].PrimaryKey = khoachinh;
             return ds.Tables["dsBGKB"];
         }
-      //////////////////////////////////////////////
+    
 
 
     }
