@@ -45,6 +45,7 @@
     <Compile Include="BangGiaKhamBenhDAL.cs" />
     <Compile Include="BenhNhanDAL.cs" />
     <Compile Include="DangNhapDAL.cs" />
+    <Compile Include="PhongDieuTri_HuyDAL.cs" />
     <Compile Include="ReportDAL.cs" />
     <Compile Include="KhoaDAL.cs" />
     <Compile Include="LoaiThuocDAL.cs" />

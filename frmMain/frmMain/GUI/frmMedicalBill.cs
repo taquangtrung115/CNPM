@@ -17,9 +17,11 @@ namespace frmMain.GUI
     public partial class frmMedicalBill : DevExpress.XtraEditors.XtraForm
     {
         NhanVienDAL nv = new NhanVienDAL();
+        BenhNhanDAL bn = new BenhNhanDAL();
         BangGiaKhamBenhDAL bgkb = new BangGiaKhamBenhDAL();
         PhieuKhamBenhDAL pkb = new PhieuKhamBenhDAL();
         BindingSource dspkb = new BindingSource();
+        PhongDieuTri_HuyDAL pdt = new PhongDieuTri_HuyDAL();
         public frmMedicalBill()
         {
             InitializeComponent();
@@ -36,10 +38,12 @@ namespace frmMain.GUI
                 txtNhanVien.Text = "Loi";
 
             }
-
+            comBoBox_PhongDieuTri();
             comBoBox_TrangThai();
             comBoBox_BangGiaKhamBenh();
             txtNgayLap.Text = DateTime.Now.ToShortDateString();
+            txtTenBN.Text = frmStaffNursing.BenhNhanTiepNhan.tenBenhNhan;
+            load_PhieuKhamBenh();
         }
 
         private void groupControl1_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
@@ -62,8 +66,9 @@ namespace frmMain.GUI
             dtblDataSource.Columns.Add("MaTrangThai");
             dtblDataSource.Columns.Add("TenTrangThai");
 
-            dtblDataSource.Rows.Add("ChoThucHien", "Chờ Thực Hiện");
-            dtblDataSource.Rows.Add("ChuaThucHien", "Chưa Thực Hiện");
+            dtblDataSource.Rows.Add("ChoKham", "Chờ Khám");
+            dtblDataSource.Rows.Add("DaKham", "Đã Khám");
+            dtblDataSource.Rows.Add("ChoXetNghiem", "Chờ Xét Nghiệm");
 
 
             cbTrangThai.Properties.DisplayMember = "TenTrangThai";
@@ -75,9 +80,14 @@ namespace frmMain.GUI
             cbHinhThucKham.Properties.DisplayMember = "HINHTHUCKHAM";
             cbHinhThucKham.Properties.ValueMember = "MAGIAKHAM";
             cbHinhThucKham.Properties.DataSource = bgkb.load_BangGiaKhamBenh();
-            cbTrangThai.ItemIndex = 0;
+            cbHinhThucKham.ItemIndex = 0;
         }
-
+        void comBoBox_PhongDieuTri() {
+            cbPhong.Properties.DisplayMember = "TENPHONG";
+            cbPhong.Properties.ValueMember = "MAPHONG";
+            cbPhong.Properties.DataSource = pdt.load_cbPhongDieuTri(); ;
+            cbPhong.ItemIndex = 0;
+        }
         DataTable layTTNV() {
             return nv.layTTNhanVien(frmLogin.ControlID.textData.ToString());
         }
@@ -95,5 +105,26 @@ namespace frmMain.GUI
 
             //}
         }
+
+        private void btnChoKham_Click(object sender, EventArgs e)
+        {
+
+            Random rd = new Random();
+            int maPhieu = rd.Next(1, 10000);
+            int maBenNhan = (bn.layMaBenhNhan(frmStaffNursing.BenhNhanTiepNhan.tenBenhNhan, frmStaffNursing.BenhNhanTiepNhan.diaChi));
+            try
+            {
+                pkb.them(maPhieu,maBenNhan,layTTNV().Rows[0].ItemArray[0].ToString(),txtNgayLap.DateTime.Date.ToShortDateString(),cbPhong.EditValue.ToString(),txtTinhTrangSK.Text,txtDeNghiKham.Text,cbHinhThucKham.EditValue.ToString(),cbTrangThai.EditValue.ToString());
+                XtraMessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                load_PhieuKhamBenh();
+           
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Thêm thất bại - Lỗi: " + ex.Message.ToString());
+
+            }
+        }
+        
     }
 }

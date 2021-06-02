@@ -53,5 +53,27 @@ namespace BLL
             SqlCommandBuilder scb = new SqlCommandBuilder(da);
             da.Update(ds.Tables["dsBN"]);
         }
+
+
+        public int layMaBenhNhan(string ten, string diachi)
+        {
+            string id = "";
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM BenhNhan WHERE tenbn = '" + ten + "' and diachi = '" + diachi + "'", cnn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt != null)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+
+                    id = dr["MaBN"].ToString();
+                }
+            }
+
+            int idd = int.Parse(id);
+            return idd;
+        }
     }
 }

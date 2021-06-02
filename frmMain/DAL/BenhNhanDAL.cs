@@ -26,7 +26,10 @@ namespace DAL
                 return false;
             }
         }
-       
-        
+
+        public int layMaBenhNhan(string ten, string diachi)
+        {
+            return bn.layMaBenhNhan(ten, diachi);
+        }
     }
 }

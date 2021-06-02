@@ -18,7 +18,11 @@ namespace frmMain.GUI
 
         BenhNhanDAL bn = new BenhNhanDAL();
         BindingSource dsBN = new BindingSource();
-
+        public static class BenhNhanTiepNhan
+        {
+            public static string tenBenhNhan { get; set; }
+            public static string diaChi { get; set; }
+        }
         public frmStaffNursing()
         {
             InitializeComponent();
@@ -95,8 +99,10 @@ namespace frmMain.GUI
         {
             themBenhNhan();
             load_GridView();
-            //frmMedicalBill form = new frmMedicalBill();
-            //form.Show();
+            BenhNhanTiepNhan.tenBenhNhan= txtTenBN.Text.ToString();
+           BenhNhanTiepNhan.diaChi=  txtDiaChi.Text.ToString();
+            frmMedicalBill form = new frmMedicalBill();
+            form.Show();
             ////////////truyen du lieu///////////
 
         }

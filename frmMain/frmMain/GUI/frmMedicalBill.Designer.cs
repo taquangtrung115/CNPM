@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicalBill));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtDeNghiKham = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenBN = new DevExpress.XtraEditors.TextEdit();
             this.cbTrangThai = new DevExpress.XtraEditors.LookUpEdit();
             this.cbHinhThucKham = new DevExpress.XtraEditors.LookUpEdit();
             this.txtTinhTrangSK = new DevExpress.XtraEditors.TextEdit();
@@ -50,14 +52,13 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtTenBN = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtDeNghiKham = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDeNghiKham.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTrangThai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbHinhThucKham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTinhTrangSK.Properties)).BeginInit();
@@ -65,8 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuKhamBenh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhanVien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNgayLap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayLap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgayLap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -76,9 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDeNghiKham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,8 +89,9 @@
             new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Tải Lại", true, buttonImageOptions1)});
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1132, 647);
+            this.groupControl1.Size = new System.Drawing.Size(970, 526);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.CustomButtonClick += new DevExpress.XtraBars.Docking2010.BaseButtonEventHandler(this.groupControl1_CustomButtonClick);
             // 
@@ -108,49 +108,81 @@
             this.layoutControl1.Controls.Add(this.txtNhanVien);
             this.layoutControl1.Controls.Add(this.txtNgayLap);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(2, 49);
+            this.layoutControl1.Location = new System.Drawing.Point(2, 45);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(286, 148, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1128, 596);
+            this.layoutControl1.Size = new System.Drawing.Size(966, 479);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // txtDeNghiKham
+            // 
+            this.txtDeNghiKham.Location = new System.Drawing.Point(115, 132);
+            this.txtDeNghiKham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDeNghiKham.Name = "txtDeNghiKham";
+            this.txtDeNghiKham.Size = new System.Drawing.Size(839, 20);
+            this.txtDeNghiKham.StyleController = this.layoutControl1;
+            this.txtDeNghiKham.TabIndex = 24;
+            // 
+            // txtTenBN
+            // 
+            this.txtTenBN.Location = new System.Drawing.Point(115, 12);
+            this.txtTenBN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenBN.Name = "txtTenBN";
+            this.txtTenBN.Size = new System.Drawing.Size(839, 20);
+            this.txtTenBN.StyleController = this.layoutControl1;
+            this.txtTenBN.TabIndex = 23;
+            // 
             // cbTrangThai
             // 
-            this.cbTrangThai.Location = new System.Drawing.Point(149, 212);
+            this.cbTrangThai.Location = new System.Drawing.Point(115, 180);
+            this.cbTrangThai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbTrangThai.Name = "cbTrangThai";
+            // 
+            // 
+            // 
             this.cbTrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbTrangThai.Size = new System.Drawing.Size(963, 22);
+            this.cbTrangThai.Size = new System.Drawing.Size(839, 20);
             this.cbTrangThai.StyleController = this.layoutControl1;
             this.cbTrangThai.TabIndex = 21;
             // 
             // cbHinhThucKham
             // 
-            this.cbHinhThucKham.Location = new System.Drawing.Point(149, 184);
+            this.cbHinhThucKham.Location = new System.Drawing.Point(115, 156);
+            this.cbHinhThucKham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbHinhThucKham.Name = "cbHinhThucKham";
+            // 
+            // 
+            // 
             this.cbHinhThucKham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbHinhThucKham.Size = new System.Drawing.Size(963, 22);
+            this.cbHinhThucKham.Size = new System.Drawing.Size(839, 20);
             this.cbHinhThucKham.StyleController = this.layoutControl1;
             this.cbHinhThucKham.TabIndex = 20;
             // 
             // txtTinhTrangSK
             // 
-            this.txtTinhTrangSK.Location = new System.Drawing.Point(149, 128);
+            this.txtTinhTrangSK.Location = new System.Drawing.Point(115, 108);
+            this.txtTinhTrangSK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTinhTrangSK.Name = "txtTinhTrangSK";
-            this.txtTinhTrangSK.Size = new System.Drawing.Size(963, 22);
+            this.txtTinhTrangSK.Size = new System.Drawing.Size(839, 20);
             this.txtTinhTrangSK.StyleController = this.layoutControl1;
             this.txtTinhTrangSK.TabIndex = 18;
             // 
             // cbPhong
             // 
-            this.cbPhong.Location = new System.Drawing.Point(149, 100);
+            this.cbPhong.Location = new System.Drawing.Point(115, 84);
+            this.cbPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbPhong.Name = "cbPhong";
+            // 
+            // 
+            // 
             this.cbPhong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbPhong.Size = new System.Drawing.Size(963, 22);
+            this.cbPhong.Size = new System.Drawing.Size(839, 20);
             this.cbPhong.StyleController = this.layoutControl1;
             this.cbPhong.TabIndex = 17;
             // 
@@ -159,20 +191,26 @@
             this.btnChoKham.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnChoKham.Appearance.Options.UseFont = true;
             this.btnChoKham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChoKham.ImageOptions.Image")));
-            this.btnChoKham.Location = new System.Drawing.Point(16, 540);
+            this.btnChoKham.Location = new System.Drawing.Point(12, 429);
+            this.btnChoKham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChoKham.Name = "btnChoKham";
-            this.btnChoKham.Size = new System.Drawing.Size(1096, 40);
+            this.btnChoKham.Size = new System.Drawing.Size(942, 38);
             this.btnChoKham.StyleController = this.layoutControl1;
             this.btnChoKham.TabIndex = 15;
             this.btnChoKham.Text = "Chờ Khám";
-     
+            this.btnChoKham.Click += new System.EventHandler(this.btnChoKham_Click);
             // 
             // dgvPhieuKhamBenh
             // 
-            this.dgvPhieuKhamBenh.Location = new System.Drawing.Point(21, 240);
+            // 
+            // 
+            // 
+            this.dgvPhieuKhamBenh.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvPhieuKhamBenh.Location = new System.Drawing.Point(17, 204);
             this.dgvPhieuKhamBenh.MainView = this.gridView1;
+            this.dgvPhieuKhamBenh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPhieuKhamBenh.Name = "dgvPhieuKhamBenh";
-            this.dgvPhieuKhamBenh.Size = new System.Drawing.Size(1091, 294);
+            this.dgvPhieuKhamBenh.Size = new System.Drawing.Size(937, 221);
             this.dgvPhieuKhamBenh.TabIndex = 12;
             this.dgvPhieuKhamBenh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -185,19 +223,26 @@
             // 
             // txtNhanVien
             // 
-            this.txtNhanVien.Location = new System.Drawing.Point(149, 44);
+            this.txtNhanVien.Location = new System.Drawing.Point(115, 36);
+            this.txtNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNhanVien.Name = "txtNhanVien";
-            this.txtNhanVien.Size = new System.Drawing.Size(963, 22);
+            this.txtNhanVien.Size = new System.Drawing.Size(839, 20);
             this.txtNhanVien.StyleController = this.layoutControl1;
             this.txtNhanVien.TabIndex = 7;
             // 
             // txtNgayLap
             // 
-            this.txtNgayLap.EditValue = null;
-            this.txtNgayLap.Location = new System.Drawing.Point(149, 72);
+            this.txtNgayLap.Location = new System.Drawing.Point(115, 60);
+            this.txtNgayLap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNgayLap.Name = "txtNgayLap";
+            // 
+            // 
+            // 
             this.txtNgayLap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            // 
+            // 
+            // 
             this.txtNgayLap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtNgayLap.Properties.DisplayFormat.FormatString = "";
@@ -206,7 +251,7 @@
             this.txtNgayLap.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtNgayLap.Properties.Mask.EditMask = "";
             this.txtNgayLap.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtNgayLap.Size = new System.Drawing.Size(963, 22);
+            this.txtNgayLap.Size = new System.Drawing.Size(839, 20);
             this.txtNgayLap.StyleController = this.layoutControl1;
             this.txtNgayLap.TabIndex = 8;
             // 
@@ -228,33 +273,33 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 4;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1128, 596);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(966, 479);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtNhanVien;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1102, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(946, 24);
             this.layoutControlItem4.Text = "Nhân Viên";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(129, 16);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(99, 13);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtNgayLap;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(1102, 28);
+            this.layoutControlItem5.Size = new System.Drawing.Size(946, 24);
             this.layoutControlItem5.Text = "Ngày Lập";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(129, 17);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(99, 13);
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.dgvPhieuKhamBenh;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 224);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 192);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(1102, 300);
+            this.layoutControlItem11.Size = new System.Drawing.Size(946, 225);
             this.layoutControlItem11.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextToControlDistance = 5;
@@ -262,97 +307,83 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnChoKham;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 524);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 417);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(1102, 46);
+            this.layoutControlItem8.Size = new System.Drawing.Size(946, 42);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.cbPhong;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 84);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1102, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(946, 24);
             this.layoutControlItem3.Text = "Mã Phòng";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(129, 16);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(99, 13);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txtTinhTrangSK;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(1102, 28);
+            this.layoutControlItem6.Size = new System.Drawing.Size(946, 24);
             this.layoutControlItem6.Text = "Tình Trạng Sức Khỏe";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(129, 17);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(99, 13);
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.cbHinhThucKham;
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 168);
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(1102, 28);
+            this.layoutControlItem14.Size = new System.Drawing.Size(946, 24);
             this.layoutControlItem14.Text = "Hình Thức Khám";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(129, 17);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(99, 13);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.cbTrangThai;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 196);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1102, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(946, 24);
             this.layoutControlItem1.Text = "Trạng Thái";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(129, 17);
-            // 
-            // txtTenBN
-            // 
-            this.txtTenBN.Location = new System.Drawing.Point(149, 16);
-            this.txtTenBN.Name = "txtTenBN";
-            this.txtTenBN.Size = new System.Drawing.Size(963, 22);
-            this.txtTenBN.StyleController = this.layoutControl1;
-            this.txtTenBN.TabIndex = 23;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(99, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtTenBN;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1102, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(946, 24);
             this.layoutControlItem2.Text = "Tên Bệnh Nhân";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(129, 17);
-            // 
-            // txtDeNghiKham
-            // 
-            this.txtDeNghiKham.Location = new System.Drawing.Point(149, 156);
-            this.txtDeNghiKham.Name = "txtDeNghiKham";
-            this.txtDeNghiKham.Size = new System.Drawing.Size(963, 22);
-            this.txtDeNghiKham.StyleController = this.layoutControl1;
-            this.txtDeNghiKham.TabIndex = 24;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(99, 13);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtDeNghiKham;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 140);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(1102, 28);
+            this.layoutControlItem7.Size = new System.Drawing.Size(946, 24);
             this.layoutControlItem7.Text = "Đề Nghị Khám";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(129, 17);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(99, 13);
             // 
             // frmMedicalBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 647);
+            this.ClientSize = new System.Drawing.Size(970, 526);
             this.Controls.Add(this.groupControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMedicalBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Phiếu Khám Bệnh";
             this.Load += new System.EventHandler(this.frmMedicalBill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtDeNghiKham.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbTrangThai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbHinhThucKham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTinhTrangSK.Properties)).EndInit();
@@ -371,9 +402,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenBN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDeNghiKham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
