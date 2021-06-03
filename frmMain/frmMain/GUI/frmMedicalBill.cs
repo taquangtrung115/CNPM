@@ -66,8 +66,9 @@ namespace frmMain.GUI
             dtblDataSource.Columns.Add("MaTrangThai");
             dtblDataSource.Columns.Add("TenTrangThai");
 
-            dtblDataSource.Rows.Add("ChoThucHien", "Chờ Thực Hiện");
-            dtblDataSource.Rows.Add("ChuaThucHien", "Chưa Thực Hiện");
+            dtblDataSource.Rows.Add("ChoKham", "Chờ Khám");
+            dtblDataSource.Rows.Add("DaKham", "Đã Khám");
+            dtblDataSource.Rows.Add("ChuaXetNghiem", "Chưa Xét Nghiệm");
 
 
             cbTrangThai.Properties.DisplayMember = "TenTrangThai";
