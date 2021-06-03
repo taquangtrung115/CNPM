@@ -22,6 +22,8 @@ namespace frmMain.GUI
         BindingSource dspkb = new BindingSource();
         BenhNhanDAL bn = new BenhNhanDAL();
         PhongDieuTri_HuyDAL pdt = new PhongDieuTri_HuyDAL();
+        HoaDonKhamBenh_HuyDAL hdkb = new HoaDonKhamBenh_HuyDAL();
+
         public frmMedicalBill()
         {
             InitializeComponent();
@@ -44,6 +46,7 @@ namespace frmMain.GUI
             txtNgayLap.Text = DateTime.Now.ToShortDateString();
             txtTenBN.Text = frmStaffNursing.BenhNhanTiepNhan.tenBenhNhan;
             pkb.load_PhieuKhamBenh();
+            hdkb.load_HDKB();
         }
 
         private void groupControl1_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
@@ -94,7 +97,23 @@ namespace frmMain.GUI
             int maPKB = rd.Next(1, 10000);
             try
             {
-                pkb.them(maPKB, bn.layMaBenhNhan(frmStaffNursing.BenhNhanTiepNhan.tenBenhNhan, frmStaffNursing.BenhNhanTiepNhan.diaChi), layTTNV().Rows[0].ItemArray[0].ToString(), txtNgayLap.DateTime.Date.ToShortDateString(), cbPhong.EditValue.ToString(), txtTinhTrangSK.Text, txtDeNghiKham.Text, cbHinhThucKham.EditValue.ToString(), cbTrangThai.EditValue.ToString());
+                pkb.them(maPKB, bn.layMaBenhNhan(frmStaffNursing.BenhNhanTiepNhan.tenBenhNhan.ToString(), frmStaffNursing.BenhNhanTiepNhan.diaChi.ToString()), layTTNV().Rows[0].ItemArray[0].ToString(), txtNgayLap.DateTime.Date.ToShortDateString(), cbPhong.EditValue.ToString(), txtTinhTrangSK.Text, txtDeNghiKham.Text, cbHinhThucKham.EditValue.ToString(), cbTrangThai.EditValue.ToString());
+                XtraMessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Thêm thất bại - Lỗi: " + ex.Message.ToString());
+
+            }
+        }
+        void themHoaDonKhamBenh() {
+            Random rd = new Random();
+            int maHDKB = rd.Next(1, 10000);
+            try
+            {
+                hdkb.them(maHDKB,pkb.laySoPhieuKham(bn.layMaBenhNhan(frmStaffNursing.BenhNhanTiepNhan.tenBenhNhan.ToString(),frmStaffNursing.BenhNhanTiepNhan.diaChi.ToString())),txtNgayLap.DateTime.Date.ToShortDateString(),bgkb.layGiaKhamBenh(cbHinhThucKham.EditValue.ToString()));
                 XtraMessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
@@ -125,6 +144,7 @@ namespace frmMain.GUI
         private void btnChoKham_Click(object sender, EventArgs e)
         {
             themPhieuKhamBenh();
+            themHoaDonKhamBenh();
             rpKhamBenh a = new rpKhamBenh();
             a.DataSource = pkb.loadPhieuKhamBenh(bn.layMaBenhNhan(frmStaffNursing.BenhNhanTiepNhan.tenBenhNhan,frmStaffNursing.BenhNhanTiepNhan.diaChi));
             ReportPrintTool tool = new ReportPrintTool(a);

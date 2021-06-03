@@ -23,8 +23,27 @@ namespace BLL
             ds.Tables["dsBGKB"].PrimaryKey = khoachinh;
             return ds.Tables["dsBGKB"];
         }
-    
 
+        public float layGiaTienKham(string maGiaKham)
+        {
+            string id = "";
+
+            SqlCommand cmd = new SqlCommand("select * from BANGGIAKHAMBENH where MAGIAKHAM= '" + maGiaKham + "'", cnn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt != null)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+
+                    id = dr["TIENKHAM"].ToString();
+                }
+            }
+
+          float idd = float.Parse(id);
+            return idd;
+        }
 
     }
 }

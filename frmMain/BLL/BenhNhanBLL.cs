@@ -59,7 +59,7 @@ namespace BLL
         {
             string id = "";
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM BenhNhan WHERE tenbn = '" + ten + "' and diachi = '" + diachi + "'", cnn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM BenhNhan WHERE tenbn = N'" + ten + "' and diachi = N'" + diachi + "'", cnn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

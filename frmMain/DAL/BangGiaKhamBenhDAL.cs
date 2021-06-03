@@ -13,5 +13,8 @@ namespace DAL
        public DataTable load_BangGiaKhamBenh() {
            return bgkb.load_BangGiaKham();
        }
+        public float layGiaKhamBenh(string maGiaKham) {
+            return bgkb.layGiaTienKham(maGiaKham);
+        }
     }
 }

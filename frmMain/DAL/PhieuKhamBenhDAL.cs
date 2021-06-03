@@ -32,5 +32,9 @@ namespace DAL
           }
       }
 
+        public int laySoPhieuKham(int maBN) {
+            return pkb.layMaPhieuKhamBenh(maBN);
+        }
+
     }
 }
