@@ -58,8 +58,8 @@ namespace frmMain.GUI
 
             txtNgaySinh.Text = DateTime.Now.ToShortDateString();
             comBoBox_GioiTinh();
-            load_GridView();
 
+            bn.loadGripView();
 
 
 
@@ -83,22 +83,13 @@ namespace frmMain.GUI
             cbGioiTinh.Properties.DataSource = dtblDataSource;
             cbGioiTinh.ItemIndex = 0;
         }
-        void BidingSource()
-        {
-            txtTenBN.DataBindings.Add(new Binding("Text", dgvDieuDuong.DataSource, "TENNV", true, DataSourceUpdateMode.Never));
-            txtNgaySinh.DataBindings.Add(new Binding("Text", dgvDieuDuong.DataSource, "NGAYSINH", true, DataSourceUpdateMode.Never));
-            cbGioiTinh.DataBindings.Add(new Binding("Text", dgvDieuDuong.DataSource, "GIOITINH", true, DataSourceUpdateMode.Never));
-        }
-        void load_GridView()
-        {
-            dgvDieuDuong.DataSource = dsBN;
-            dsBN.DataSource = bn.loadGripView();
-        }
+       
+       
 
         private void btnLapPhieu_Click(object sender, EventArgs e)
         {
             themBenhNhan();
-            load_GridView();
+         
             BenhNhanTiepNhan.tenBenhNhan= txtTenBN.Text.ToString();
            BenhNhanTiepNhan.diaChi=  txtDiaChi.Text.ToString();
             frmMedicalBill form = new frmMedicalBill();
@@ -113,7 +104,7 @@ namespace frmMain.GUI
             {
                 bn.them(mabenhNhan, txtTenBN.Text, txtNgaySinh.DateTime.Date.ToShortDateString(), cbGioiTinh.EditValue.ToString(), txtDiaChi.Text, txtSDT.Text);
                 XtraMessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                load_GridView();
+           
             }
             catch (Exception ex)
             {
@@ -122,9 +113,6 @@ namespace frmMain.GUI
             }
         }
 
-        private void btnTim_Click(object sender, EventArgs e)
-        {
-            load_GridView();
-        }
+       
     }
 }

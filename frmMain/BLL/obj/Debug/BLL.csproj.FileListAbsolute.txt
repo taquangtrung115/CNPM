@@ -2,9 +2,3 @@ C:\Users\Huy\Desktop\Git\CNPM\frmMain\BLL\bin\Debug\BLL.dll
 C:\Users\Huy\Desktop\Git\CNPM\frmMain\BLL\bin\Debug\BLL.pdb
 C:\Users\Huy\Desktop\Git\CNPM\frmMain\BLL\obj\Debug\BLL.dll
 C:\Users\Huy\Desktop\Git\CNPM\frmMain\BLL\obj\Debug\BLL.pdb
-D:\CNPM\Thư mục mới\CNPM\frmMain\BLL\bin\Debug\BLL.dll
-D:\CNPM\Thư mục mới\CNPM\frmMain\BLL\bin\Debug\BLL.pdb
-D:\CNPM\Thư mục mới\CNPM\frmMain\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
-D:\CNPM\Thư mục mới\CNPM\frmMain\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-D:\CNPM\Thư mục mới\CNPM\frmMain\BLL\obj\Debug\BLL.dll
-D:\CNPM\Thư mục mới\CNPM\frmMain\BLL\obj\Debug\BLL.pdb

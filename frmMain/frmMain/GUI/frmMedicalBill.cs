@@ -20,6 +20,8 @@ namespace frmMain.GUI
         BangGiaKhamBenhDAL bgkb = new BangGiaKhamBenhDAL();
         PhieuKhamBenhDAL pkb = new PhieuKhamBenhDAL();
         BindingSource dspkb = new BindingSource();
+        BenhNhanDAL bn = new BenhNhanDAL();
+        PhongDieuTri_HuyDAL pdt = new PhongDieuTri_HuyDAL();
         public frmMedicalBill()
         {
             InitializeComponent();
@@ -36,10 +38,11 @@ namespace frmMain.GUI
                 txtNhanVien.Text = "Loi";
 
             }
-
+            comBoBox_PhongDieuTri();
             comBoBox_TrangThai();
             comBoBox_BangGiaKhamBenh();
             txtNgayLap.Text = DateTime.Now.ToShortDateString();
+            txtTenBN.Text = frmStaffNursing.BenhNhanTiepNhan.tenBenhNhan;
         }
 
         private void groupControl1_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
@@ -72,12 +75,18 @@ namespace frmMain.GUI
             cbTrangThai.ItemIndex = 0;
         }
         void comBoBox_BangGiaKhamBenh() {
-            //cbGiaKham.Properties.DisplayMember = "HINHTHUCKHAM";
-            //cbGiaKham.Properties.ValueMember = "MAGIAKHAM";
-            //cbGiaKham.Properties.DataSource = bgkb.load_BangGiaKhamBenh();
-            //cbTrangThai.ItemIndex = 0;
+            cbHinhThucKham.Properties.DisplayMember = "HINHTHUCKHAM";
+            cbHinhThucKham.Properties.ValueMember = "MAGIAKHAM";
+            cbHinhThucKham.Properties.DataSource = bgkb.load_BangGiaKhamBenh();
+            cbHinhThucKham.ItemIndex = 0;
         }
-
+        void comBoBox_PhongDieuTri()
+        {
+            cbPhong.Properties.DisplayMember = "TENPHONG";
+            cbPhong.Properties.ValueMember = "MAPHONG";
+            cbPhong.Properties.DataSource = pdt.load_cbPhongDieuTri();
+            cbPhong.ItemIndex = 0;
+        }
         DataTable layTTNV() {
             return nv.layTTNhanVien(frmLogin.ControlID.textData.ToString());
         }
@@ -98,8 +107,9 @@ namespace frmMain.GUI
 
         private void btnChoKham_Click(object sender, EventArgs e)
         {
+          
             rpKhamBenh a = new rpKhamBenh();
-            a.DataSource = pkb.loadPhieuKhamBenh(txtTenBN.Text.Trim());
+            a.DataSource = pkb.loadPhieuKhamBenh(bn.layMaBenhNhan(frmStaffNursing.BenhNhanTiepNhan.tenBenhNhan,frmStaffNursing.BenhNhanTiepNhan.diaChi));
             ReportPrintTool tool = new ReportPrintTool(a);
             a.ShowPreviewDialog();
         }
