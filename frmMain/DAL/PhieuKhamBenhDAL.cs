@@ -13,7 +13,7 @@ namespace DAL
       public DataTable load_PhieuKhamBenh() {
        return   pkb.load_PhieuKhamBenh();
       }
-        public DataTable loadPhieuKhamBenh(string tenBN)
+        public DataTable loadPhieuKhamBenh(int tenBN)
         {
             return pkb.loadPhieuKhamBenh(tenBN);
         }

@@ -13,9 +13,9 @@ namespace BLL
         SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-1RP7O2E\\SQLEXPRESS;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=sa2012");
         //SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-R95F3JA;Initial Catalog=QLPHONGKHAMBENH;User ID=sa;Password=taquangtrung");
         SqlDataAdapter da;
-        public DataTable loadPhieuKhamBenh(string tenBN)
+        public DataTable loadPhieuKhamBenh(int tenBN)
         {
-            da = new SqlDataAdapter("exec rpPhieuKhamBenh N'"+tenBN+"'", cnn);
+            da = new SqlDataAdapter("exec rpPhieuKhamBenh " + tenBN, cnn);
             da.Fill(ds, "dsPK");
             
             return ds.Tables["dsPK"];

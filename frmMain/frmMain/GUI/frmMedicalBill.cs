@@ -101,7 +101,6 @@ namespace frmMain.GUI
             rpKhamBenh a = new rpKhamBenh();
             a.DataSource = pkb.loadPhieuKhamBenh(txtTenBN.Text.Trim());
             ReportPrintTool tool = new ReportPrintTool(a);
-
             a.ShowPreviewDialog();
         }
     }
