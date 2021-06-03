@@ -13,5 +13,23 @@ namespace DAL
         {
             return bn.loadGridView();
         }
+
+        public bool them( int maBN,string tenBN,  string ngaySinh, string gioiTinh, string diaChi,  string sDT)
+        {
+            if (bn.them(maBN,tenBN,ngaySinh,gioiTinh,diaChi,sDT) == true)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public int layMaBenhNhan(string ten, string diachi)
+        {
+            return bn.layMaBenhNhan(ten, diachi);
+        }
     }
 }
