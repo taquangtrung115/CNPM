@@ -50,6 +50,7 @@
             this.btnThuNgan = new DevExpress.XtraBars.BarButtonItem();
             this.btnLayThuoc = new DevExpress.XtraBars.BarButtonItem();
             this.btnNhapHang = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -65,7 +66,6 @@
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +107,7 @@
             this.ribbonPage3,
             this.ribbonPage4});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1102, 194);
+            this.ribbonControl1.Size = new System.Drawing.Size(1245, 194);
             // 
             // btnNhaCC
             // 
@@ -268,6 +268,12 @@
             this.btnNhapHang.Name = "btnNhapHang";
             this.btnNhapHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 22;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -380,18 +386,12 @@
             this.barButtonItem1.ImageOptions.LargeImage = global::frmMain.Properties.Resources.client_account_template_icon;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // barButtonItem4
-            // 
-            this.barButtonItem4.Caption = "barButtonItem4";
-            this.barButtonItem4.Id = 22;
-            this.barButtonItem4.Name = "barButtonItem4";
-            // 
             // frmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 576);
+            this.ClientSize = new System.Drawing.Size(1245, 718);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;

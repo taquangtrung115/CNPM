@@ -82,7 +82,7 @@ namespace frmMain.GUI
             return nv.layTTNhanVien(frmLogin.ControlID.textData.ToString());
         }
         void load_PhieuKhamBenh() {
-            dgvPhieuKhamBenh.DataSource = dspkb;
+            
             dspkb.DataSource = pkb.load_PhieuKhamBenh();
 
             ReportDAL hd = new ReportDAL();
@@ -98,7 +98,11 @@ namespace frmMain.GUI
 
         private void btnChoKham_Click(object sender, EventArgs e)
         {
+            rpKhamBenh a = new rpKhamBenh();
+            a.DataSource = pkb.loadPhieuKhamBenh(txtTenBN.Text.Trim());
+            ReportPrintTool tool = new ReportPrintTool(a);
 
+            a.ShowPreviewDialog();
         }
     }
 }
